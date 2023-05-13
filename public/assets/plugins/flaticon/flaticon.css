@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("./flaticon.ttf?46bb6a31a0c922eb5e2f58b5b7b51b89") format("truetype"),
+url("./flaticon.woff?46bb6a31a0c922eb5e2f58b5b7b51b89") format("woff"),
+url("./flaticon.woff2?46bb6a31a0c922eb5e2f58b5b7b51b89") format("woff2"),
+url("./flaticon.eot?46bb6a31a0c922eb5e2f58b5b7b51b89#iefix") format("embedded-opentype"),
+url("./flaticon.svg?46bb6a31a0c922eb5e2f58b5b7b51b89#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-company:before {
+    content: "\f101";
+}
+.flaticon-conveyor-belt:before {
+    content: "\f102";
+}
+.flaticon-crm:before {
+    content: "\f103";
+}
+.flaticon-customer-1:before {
+    content: "\f104";
+}
+.flaticon-customer:before {
+    content: "\f105";
+}
+.flaticon-customers:before {
+    content: "\f106";
+}
+.flaticon-employee-1:before {
+    content: "\f107";
+}
+.flaticon-employee:before {
+    content: "\f108";
+}
+.flaticon-manufacture-1:before {
+    content: "\f109";
+}
+.flaticon-manufacture:before {
+    content: "\f10a";
+}
+.flaticon-rating-1:before {
+    content: "\f10b";
+}
+.flaticon-rating:before {
+    content: "\f10c";
+}
+.flaticon-research:before {
+    content: "\f10d";
+}
+.flaticon-server:before {
+    content: "\f10e";
+}
+.flaticon-shopping:before {
+    content: "\f10f";
+}
+.flaticon-value:before {
+    content: "\f110";
+}

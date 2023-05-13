@@ -1,0 +1,89 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?46bb6a31a0c922eb5e2f58b5b7b51b89") format("truetype"),
+url("./flaticon.woff?46bb6a31a0c922eb5e2f58b5b7b51b89") format("woff"),
+url("./flaticon.woff2?46bb6a31a0c922eb5e2f58b5b7b51b89") format("woff2"),
+url("./flaticon.eot?46bb6a31a0c922eb5e2f58b5b7b51b89#iefix") format("embedded-opentype"),
+url("./flaticon.svg?46bb6a31a0c922eb5e2f58b5b7b51b89#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "company": "\f101",
+    "conveyor-belt": "\f102",
+    "crm": "\f103",
+    "customer-1": "\f104",
+    "customer": "\f105",
+    "customers": "\f106",
+    "employee-1": "\f107",
+    "employee": "\f108",
+    "manufacture-1": "\f109",
+    "manufacture": "\f10a",
+    "rating-1": "\f10b",
+    "rating": "\f10c",
+    "research": "\f10d",
+    "server": "\f10e",
+    "shopping": "\f10f",
+    "value": "\f110",
+);
+
+.flaticon-company:before {
+    content: map-get($flaticon-map, "company");
+}
+.flaticon-conveyor-belt:before {
+    content: map-get($flaticon-map, "conveyor-belt");
+}
+.flaticon-crm:before {
+    content: map-get($flaticon-map, "crm");
+}
+.flaticon-customer-1:before {
+    content: map-get($flaticon-map, "customer-1");
+}
+.flaticon-customer:before {
+    content: map-get($flaticon-map, "customer");
+}
+.flaticon-customers:before {
+    content: map-get($flaticon-map, "customers");
+}
+.flaticon-employee-1:before {
+    content: map-get($flaticon-map, "employee-1");
+}
+.flaticon-employee:before {
+    content: map-get($flaticon-map, "employee");
+}
+.flaticon-manufacture-1:before {
+    content: map-get($flaticon-map, "manufacture-1");
+}
+.flaticon-manufacture:before {
+    content: map-get($flaticon-map, "manufacture");
+}
+.flaticon-rating-1:before {
+    content: map-get($flaticon-map, "rating-1");
+}
+.flaticon-rating:before {
+    content: map-get($flaticon-map, "rating");
+}
+.flaticon-research:before {
+    content: map-get($flaticon-map, "research");
+}
+.flaticon-server:before {
+    content: map-get($flaticon-map, "server");
+}
+.flaticon-shopping:before {
+    content: map-get($flaticon-map, "shopping");
+}
+.flaticon-value:before {
+    content: map-get($flaticon-map, "value");
+}
