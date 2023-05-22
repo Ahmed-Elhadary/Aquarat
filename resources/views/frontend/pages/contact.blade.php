@@ -7,141 +7,111 @@
         <div class="page-content bg-white">
             <!-- Slider -->
 
-            <div class="dlab-bnr-inr overlay-black-dark banner-content " style="background-image:url(assets/img/slide10.jpg);">
+            <section class="page-header page-header-modern page-header-background page-header-background-sm parallax overlay overlay-color-dark overlay-show overlay-op-1 my-0" data-plugin-parallax data-plugin-options="{'speed': 1.5}" data-image-src="{{ asset('Images/About/2021-04-07-22-44-03_image_4.jpg') }}">
                 <div class="container">
-                    <span class="text-bg"> @lang('site.contact')</span>
-                    <div class="dlab-bnr-inr-entry">
-                        <h1 class="text-white">@lang('site.contact')</h1>
-                        <!-- Breadcrumb row -->
-                        <div class="breadcrumb-row">
-                            <ul class="list-inline">
-                                <li><a href="{{ route('homePage') }}">@lang('site.home') </a></li>
-                                <li>@lang('site.contact') </li>
-                            </ul>
+                    <div class="row my-5">
+                        <div class="col-md-12 align-self-center text-center">
+                            <h1 class="text-9 text-color-light custom-secondary-font font-weight-bold mb-1"> تواصل معنا </h1>
+                            {{--  <p class="text-color-light custom-secondary-font text-uppercase mb-0"> نبذة عنا</p>  --}}
                         </div>
-                        <!-- Breadcrumb row END -->
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <!-- Slider END -->
-            <!-- contact area -->
-            <div class="content-block">
-                <div class="section-full content-inner bg-white contact-style-1">
-                    <div class="container">
-
-                        <div class="headTitle">
-                            <h2>@lang('site.contact')</h2>
-                             <svg width="200px" height="20px">
-                                        <line x1="0" y1="10" x2="200" y2="10" stroke="#9e9e9e" stroke-width="1px"></line>
-                                         <line x1="60" y1="10" x2="140" y2="10" stroke="#f7c800" stroke-width="6px"></line>
-                            </svg>
-                        </div>
-
-
+        	<div class="container mt-5 mt-lg-0">
+                <div class="row">
+                    <div class="col-lg-6 text-center pb-3 pb-lg-0 mb-5 mb-lg-0">
+                        <span class="d-block text-color-grey positive-ls-2 font-weight-normal custom-font-size-2 text-color-light opacity-6 mb-1">GET IN TOUCH</span>
+                        <h2 class="font-weight-bold text-color-light text-10 mb-5">تواصل معنا</h2>
                         <div class="row">
-                            <!-- right part start -->
-                            <div class="col-lg-4 col-md-6 d-flex m-b30">
-                                <div class="p-a30 border contact-area border-1 align-self-stretch radius-sm">
-                                    <h3 class="m-b5">@lang('site.fast_contact') </h3>
-                                    <p>@lang('site.for_contact').</p>
-                                    <ul class="no-margin">
-                                        <li class="icon-bx-wraper left m-b30">
-                                            <div class="icon-bx-xs border-1"> <a href="javascript:void(0);" class="icon-cell"><i class="ti-location-pin"></i></a> </div>
-                                            <div class="icon-content">
-                                                <h6 class="text-uppercase m-tb0 dlab-tilte">@lang('site.address')</h6>
-                                                <div class="contactInfo-data">
-                                                    {!! html_entity_decode( $contactInfo[$lang.'_address']) !!}
-                                                </div>
+                            <div class="col-lg-6">
 
-                                            </div>
-                                        </li>
-                                        <li class="icon-bx-wraper left  m-b30">
-                                            <div class="icon-bx-xs border-1"> <a href="javascript:void(0);" class="icon-cell"><i class="ti-email"></i></a> </div>
-                                            <div class="icon-content">
-                                                <h6 class="text-uppercase m-tb0 dlab-tilte"> @lang('site.email')</h6>
-                                                <div class="contactInfo-data">
-                                                    {!! html_entity_decode( $contactInfo->email) !!}
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="icon-bx-wraper left">
-                                            <div class="icon-bx-xs border-1"> <a href="javascript:void(0);" class="icon-cell"><i class="ti-mobile"></i></a> </div>
-                                            <div class="icon-content">
-                                                <h6 class="text-uppercase m-tb0 dlab-tilte"> @lang('site.phone')</h6>
-                                                <div class="contactInfo-data">
-                                                    {!! html_entity_decode( $contactInfo->phone) !!}
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="m-t20">
-                                        <ul class="dlab-social-icon border dlab-social-icon-lg">
-                                            <li><a href="javascript:void(0);" class="fa fa-facebook bg-primary"></a></li>
-                                            <li><a href="javascript:void(0);" class="fa fa-twitter bg-primary"></a></li>
-                                            <li><a href="javascript:void(0);" class="fa fa-linkedin bg-primary"></a></li>
-                                            <li><a href="javascript:void(0);" class="fa fa-pinterest-p bg-primary"></a></li>
-                                            <li><a href="javascript:void(0);" class="fa fa-google-plus bg-primary"></a></li>
-                                        </ul>
+                                <div class="row pb-5 mb-5">
+                                    <div class="col">
+                                        <div data-plugin-float-element data-plugin-options="{'startPos': 'top', 'speed': 0.2, 'isInsideSVG': true, 'transition': true, 'transitionDuration': 2000}">
+                                            <img class="icon-animated" width="55" src="{{ asset('Images/contactus/icon-location.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary mb-3'}" />
+                                            <h4 class="font-weight-bold text-color-secondary text-5 mb-0">العنوان</h4>
+                                            <p class="text-4 text-color-light opacity-5 font-weight-light mb-0">  {!! html_entity_decode( $contactInfo['ar_address']) !!}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- right part END -->
-                            <!-- Left part start -->
-                            <div class="col-lg-8 col-md-6  mb-4 m-b30 mb-md-0">
-                                <div class="p-a30 bg-gray clearfix radius-sm">
-                                    <h3 class="m-b10"> @lang('site.send_u_message') </h3>
-                                    <div class="dzFormMsg"></div>
-                                    <form method="post" action="{{ route('contactus.store') }}"  class="" >
-                                        @csrf
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="form-group">
-                                                    <div class="input-group">
-                                                        <input name="name" type="text" required="" class="form-control" placeholder="@lang('site.name')">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-12">
-                                                <div class="form-group">
-                                                    <div class="input-group">
-                                                        <input name="phone" type="text" class="form-control" required="" placeholder=" @lang('site.phone')">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-12">
-                                                <div class="form-group">
-                                                    <div class="input-group">
-                                                        <input name="email" type="email" class="form-control" required="" placeholder="@lang('site.email')">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                             <div class="col-lg-12">
-                                                <div class="form-group">
-                                                    <div class="input-group">
-                                                        <textarea name="message" rows="4" class="form-control" required="" placeholder="@lang('site.your_message')"></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-3">
-                                                <button type="submit"   class="site-button m-r10 m-b10 btnhover20"> @lang('site.send')</button>
-                                            </div>
-                                            </div>
-                                    </form>
+                                <div class="row">
+                                    <div class="col">
+                                        <div data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.1, 'isInsideSVG': true, 'transition': true, 'transitionDuration': 2000}">
+                                            <img class="icon-animated" width="55" src="{{ asset('Images/contactus/icon-mail.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-secondary mb-3'}" />
+                                            <h4 class="font-weight-bold text-color-secondary text-5 mb-0">البريد الالكتروني</h4>
+                                            <a href="mailto:email@domain.com" class="text-4 text-color-light text-color-hover-primary opacity-5 font-weight-light mb-0">   {!! html_entity_decode( $contactInfo->email) !!}</a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
 
+                            </div>
+                            <div class="col-lg-6 pt-5">
+
+                                <div class="row pb-5 mb-5">
+                                    <div class="col">
+                                        <div data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.2, 'isInsideSVG': true, 'transition': true, 'transitionDuration': 2000}">
+                                            <img class="icon-animated" width="55" src="{{ asset('Images/contactus/icon-phone.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-secondary mb-3'}" />
+                                            <h4 class="font-weight-bold text-color-secondary text-5 mb-0">ارقامنا</h4>
+                                            <a href="tel:+1234567890" class="text-4 text-color-light text-color-hover-primary opacity-5 font-weight-light mb-0">  {!! html_entity_decode( $contactInfo->phone) !!}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{--  <div class="row">
+                                    <div class="col">
+                                        <div data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.1, 'isInsideSVG': true, 'transition': true, 'transitionDuration': 2000}">
+                                            <img class="icon-animated" width="55" src="{{ asset('Images/contactus/icon-calendar.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary mb-3'}" />
+                                            <h4 class="font-weight-bold text-color-light text-5 mb-0">Working Days/Hours</h4>
+                                            <p class="text-4 text-color-light opacity-5 font-weight-light mb-0">Mon - Sun / 9:00AM - 8:00PM</p>
+                                        </div>
+                                    </div>
+                                </div>  --}}
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 ps-lg-5">
+                        {{--  <span class="d-block text-color-secondary positive-ls-2 font-weight-normal custom-font-size-2 text-color-light opacity-6 text-center mb-1">CONTACT FORM</span>  --}}
+                        <h2 class="font-weight-bold text-10 text-center pb-3 mb-4">ارسل لنا</h2>
+                        <div class="row">
+                            <div class="col">
+
+                                <form class="custom-form-style-1 " action="{{ route('contactus.store') }}" method="POST">
+                                    @csrf
+
+                                    <div class="row">
+                                        <div class="form-group col">
+                                            <input type="text" value="" maxlength="100" class="form-control" name="name" placeholder="الاسم" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col">
+                                            <input type="text" value=""  maxlength="100" class="form-control" name="phone" placeholder="رقم الجوال" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col">
+                                            <input type="email" value="" data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" placeholder="البريد الالكتروني" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col">
+                                            <textarea maxlength="5000"  rows="6" class="form-control" name="message" placeholder="رسالتك" required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col text-center">
+                                            <input type="submit" value="ارسال" class="btn btn-gradient text-3 font-weight-bold px-5 py-3" >
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-
-
-
-
-
             </div>
+
         </div>
         <!-- Content END -->
 @endsection

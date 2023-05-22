@@ -28,15 +28,6 @@
                                                 من نحن
                                             </a>
 
-                                        <li>
-                                            <a class="nav-link" href="demo-church-sermons.html">
-                                                Sermons
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="nav-link" href="demo-church-events.html">
-                                                Events
-                                            </a>
                                         </li>
                                         <li>
                                             <a class="nav-link" href="">
@@ -44,8 +35,8 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="nav-link" href="demo-church-blog.html">
-                                                Blog
+                                            <a class="nav-link" href="{{ route('contact') }}">
+                                                تواصل معنا
                                             </a>
                                         </li>
                                     </ul>
