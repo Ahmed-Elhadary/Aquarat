@@ -1,0 +1,16 @@
+.slider-text {
+    font-size: 30px !important;
+    line-height: 50px !important;
+}
+
+.custom-carousel-arrows-style-1 .owl-nav .owl-next:before,
+.custom-carousel-arrows-style-1 .owl-nav .owl-prev:before {
+    width: 15px !important;
+    height: 15px !important;
+}
+
+.button_slider:hover , .button_slider:active , .button_slider:focus {
+    background-color: #5575c8 !important;
+    background-image: none !important;
+    border-color: #5575c8 #5575c8 #5575c8 !important;
+}

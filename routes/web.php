@@ -76,11 +76,7 @@ Route::group(['middleware' => 'auth'], function () {
  });
 
  Route::resource('dashboard/contactus', ContactUsController::class);
- Route::group(
-    [
-        'prefix' => LaravelLocalization::setLocale(),
-        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
-    ], function(){
+
 
 Route::group(['namespace'=>'Front'] , function () {
     Route::get('/', [homeController::class, 'index'])->name('homePage');
@@ -104,7 +100,7 @@ Route::group(['namespace'=>'Front'] , function () {
 
 });
 
-});
+
 Auth::routes();
 
 Route::get('dashboard/home', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard.index');

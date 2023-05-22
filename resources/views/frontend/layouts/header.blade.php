@@ -1,56 +1,69 @@
 <!DOCTYPE html>
 <html @if (LaravelLocalization::getCurrentLocale() == 'ar') lang="ar" dir="rtl"
 @else
-lang="en" dir="ltr"
-@endif>
-	<head>
+lang="en" dir="ltr" @endif>
 
-		<!-- Basic -->
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<head>
 
-		<title>Demo Church | Porto - Responsive HTML5 Template</title>
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<meta name="keywords" content="HTML5 Template" />
-		<meta name="description" content="Porto - Responsive HTML5 Template">
-		<meta name="author" content="okler.net">
+    <title>Demo Church | Porto - Responsive HTML5 Template</title>
 
-		<!-- Favicon -->
-		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-		<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="Porto - Responsive HTML5 Template">
+    <meta name="author" content="okler.net">
 
-		<!-- Mobile Metas -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
-		<!-- Web Fonts  -->
-		<link id="googleFonts" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CPlayfair+Display:400,400i,700%7CSintony:400,700,800&display=swap" rel="stylesheet" type="text/css">
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
 
-		<!-- Vendor CSS -->
-		<link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/css/bootstrap.css') }}">
-		<link rel="stylesheet" href="{{ asset('assets/vendor/animate/animate.compat.css') }}">
-		<link rel="stylesheet" href="{{ asset('assets/vendor/simple-line-icons/css/simple-line-icons.min.css') }}">
-		<link rel="stylesheet" href="{{ asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css')  }}">
-		<link rel="stylesheet" href="{{ asset('assets/vendor/owl.carousel/assets/owl.theme.default.min.css') }}">
-		<link rel="stylesheet" href="{{  asset('assets/vendor/magnific-popup/magnific-popup.min.css') }}">
+    <!-- Web Fonts  -->
+    <link id="googleFonts"
+        href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CPlayfair+Display:400,400i,700%7CSintony:400,700,800&display=swap"
+        rel="stylesheet" type="text/css">
 
-		<!-- Theme CSS -->
-		<link rel="stylesheet" href="{{ asset('assets/css/theme.css') }}">
-		<link rel="stylesheet" href="{{ asset('assets/css/theme-elements.css') }}">
-		<link rel="stylesheet" href="{{ asset('assets/css/theme-blog.css') }}">
-		<link rel="stylesheet" href="{{ asset('assets/css/theme-shop.css') }}">
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/css/bootstrap.rtl.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/vendor/animate/animate.compat.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/vendor/simple-line-icons/css/simple-line-icons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/vendor/owl.carousel/assets/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/vendor/magnific-popup/magnific-popup.min.css') }}">
 
-		<!-- Demo CSS -->
-		<link rel="stylesheet" href="{{ asset('assets/css/demo-church.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/master/rtl/css/rtl-theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/master/rtl/css/rtl-theme-elements.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/master/rtl/css/rtl-theme-blog.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/master/rtl/css/rtl-theme-shop.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/master/rtl/css/demos/rtl-demo-church.css') }}">
 
-		<!-- Skin CSS -->
-		<link id="skinCSS" rel="stylesheet" href="{{ asset('assets/css/skin-church.css') }}">
 
-		<!-- Theme Custom CSS -->
-		<link rel="stylesheet" href="{{  asset('assets/css/custom.css') }}">
+    <link id="skinCSS" rel="stylesheet" href="{{ asset('assets/css/skin-church.css') }}">
 
-		<!-- Head Libs -->
-		<script src="{{ asset('assets/vendor/modernizr/modernizr.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
 
-	</head>
-	<body>
+    <!-- Head Libs -->
+    <script src="{{ asset('assets/vendor/modernizr/modernizr.min.js') }}"></script>
 
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap"
+        rel="stylesheet">
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/cairo');
+
+        body,
+        h1,
+        span,
+        h2,
+        h3,
+        h4,
+        h5 , ul, li{
+            font-family: 'Cairo', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
