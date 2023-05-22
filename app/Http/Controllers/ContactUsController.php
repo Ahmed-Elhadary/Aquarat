@@ -38,8 +38,7 @@ class ContactUsController extends Controller
      */
     public function store(Request $request)
     {
-        $data = request(["name","phone","email","message"]);
-        Mail::to('ahmedsallah005@gmail.com')->send(new ContactMe($data));
+        // Mail::to('ahmedsallah005@gmail.com')->send(new ContactMe($data));
         ContactUs::create($request->all());
         return back();
     }

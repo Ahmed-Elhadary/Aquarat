@@ -47,7 +47,7 @@
               </div>
 
               {{-- Team --}}
-              <div class="col-xl-3 col-lg-6 mb-4">
+              {{--  <div class="col-xl-3 col-lg-6 mb-4">
                   <div class="card card-stats mb-4 mb-xl-0">
                     <div class="card-body">
                       <div class="row">
@@ -66,10 +66,10 @@
                       </p>
                     </div>
                   </div>
-              </div>
+              </div>  --}}
 
               {{-- category --}}
-              <div class="col-xl-3 col-lg-6 mb-4">
+              {{--  <div class="col-xl-3 col-lg-6 mb-4">
                   <div class="card card-stats mb-4 mb-xl-0">
                     <div class="card-body">
                       <div class="row">
@@ -88,7 +88,7 @@
                       </p>
                     </div>
                   </div>
-              </div>
+              </div>  --}}
 
               {{-- product --}}
               <div class="col-xl-3 col-lg-6 mb-4">
@@ -113,7 +113,7 @@
               </div>
 
               {{-- reviews --}}
-              <div class="col-xl-3 col-lg-6 mb-4">
+              {{--  <div class="col-xl-3 col-lg-6 mb-4">
                 <div class="card card-stats mb-4 mb-xl-0">
                   <div class="card-body">
                     <div class="row">
@@ -132,10 +132,10 @@
                     </p>
                   </div>
                 </div>
-              </div>
+              </div>  --}}
 
                 {{-- services --}}
-                <div class="col-xl-3 col-lg-6 mb-4">
+                {{--  <div class="col-xl-3 col-lg-6 mb-4">
                   <div class="card card-stats mb-4 mb-xl-0">
                     <div class="card-body">
                       <div class="row">
@@ -154,7 +154,7 @@
                       </p>
                     </div>
                   </div>
-                </div>
+                </div>  --}}
 
                 {{-- Questions --}}
                 {{--  <div class="col-xl-3 col-lg-6 mb-4">
