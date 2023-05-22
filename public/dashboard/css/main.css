@@ -9567,7 +9567,7 @@ a, button, .btn {
 .vertical-nav-menu li a.mm-active {
     color: #343a40;
     font-weight: bold;
-    background: #fdd20eff !important;
+    background: #1770b6 !important;
 }
 
 .vertical-nav-menu i.metismenu-state-icon, .vertical-nav-menu i.metismenu-icon {
@@ -9581,7 +9581,7 @@ a, button, .btn {
     margin-top: -17px;
     font-size: 1.5rem;
     opacity: 1;
-    color: #f93822ff;
+    color: #a1c2a8;
     transition: color 300ms
 }
 

@@ -96,12 +96,12 @@
                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                     </a>
                     <ul>
-                        <li >
+                        {{--  <li >
                             <a class="{{ (request()->is('*dashboard/company_date*')) ? 'mm-active' : '' }}" href="{{ route('company_date.index') }}">
                                 <i class="metismenu-icon pe-7s-stopwatch">
                                 </i>Company Date
                             </a>
-                        </li>
+                        </li>  --}}
                         <li >
                             <a class="{{ (request()->is('*dashboard/companies*')) ? 'mm-active' : '' }}" href="{{ route('companies.index') }}">
                                 <i class="metismenu-icon pe-7s-stopwatch">
@@ -142,19 +142,19 @@
                     </a>
                 </li>
 
-                <li>
+                {{--  <li>
                     <a class="{{ (request()->is('*dashboard/questions*')) ? 'mm-active' : '' }}"  href="{{ route('questions.index') }}">
                         <i class="metismenu-icon pe-7s-help1"></i>
                        Questions
                     </a>
-                </li>
+                </li>  --}}
 
-                <li>
+                {{--  <li>
                     <a class="{{ (request()->is('*dashboard/blogs*')) ? 'mm-active' : '' }}"  href="{{ route('blogs.index') }}">
                         <i class="metismenu-icon pe-7s-help1"></i>
                        Blogs
                     </a>
-                </li>
+                </li>  --}}
                 <li>
                     <a class="{{ (request()->is('*dashboard/services*')) ? 'mm-active' : '' }}" href="{{ route('services.index') }}">
                         <i class="metismenu-icon   pe-7s-tools"></i>

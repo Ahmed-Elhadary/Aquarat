@@ -169,8 +169,8 @@ iframe {
   align-items: center;
   padding: 15px;
   /* background: #F7c800; */
-  background: rgb(124,101,0);
-  background: linear-gradient(90deg, rgba(124,101,0,1) 0%, rgba(247,200,0,1) 100%);
+  background: rgb(23,112,181);
+  background: linear-gradient(90deg, rgba(23,112,181,1) 0%, rgba(60,136,129,1) 100%);
 }
 
 .wrap-login100 {

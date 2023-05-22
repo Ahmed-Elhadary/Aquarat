@@ -75,6 +75,33 @@
                                 </div>
                               </div>
                         </div>
+                        <div class="col-md-12 mb-3">
+                            <label >Image *</label>
+                            <div class="input-group mb-3">
+                                <div class="custom-file">
+                                  <input type="file" class="custom-file-input" name="image1" id="inputGroupFile02" >
+                                  <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label >Image *</label>
+                            <div class="input-group mb-3">
+                                <div class="custom-file">
+                                  <input type="file" class="custom-file-input" name="image2" id="inputGroupFile02" >
+                                  <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label >Image *</label>
+                            <div class="input-group mb-3">
+                                <div class="custom-file">
+                                  <input type="file" class="custom-file-input" name="image3" id="inputGroupFile02" >
+                                  <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+                                </div>
+                              </div>
+                        </div>
                     </div>
                     @method('put')
                     <button class="btn btn-warning" type="submit">Update</button>

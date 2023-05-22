@@ -9,7 +9,7 @@
                     <i class="pe-7s-display2 icon-gradient bg-mean-fruit">
                     </i>
                 </div>
-                <div>Queen Land Dashboard
+                <div>MS Construction Dashboard
                     <div class="page-title-subheading">
                         Dashboard all over the site ,
                         You can change the content with ease and flexibility.
@@ -157,7 +157,7 @@
                 </div>
 
                 {{-- Questions --}}
-                <div class="col-xl-3 col-lg-6 mb-4">
+                {{--  <div class="col-xl-3 col-lg-6 mb-4">
                   <div class="card card-stats mb-4 mb-xl-0">
                     <div class="card-body">
                       <div class="row">
@@ -176,7 +176,7 @@
                       </p>
                     </div>
                   </div>
-                </div>
+                </div>  --}}
 
                 {{-- Messages --}}
                 <div class="col-xl-3 col-lg-6 mb-4">

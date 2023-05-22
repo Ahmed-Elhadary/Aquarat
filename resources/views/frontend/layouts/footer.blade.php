@@ -1,130 +1,57 @@
-  <!-- Footer -->
+<!-- Footer -->
 @php $lang = LaravelLocalization::getCurrentLocale(); @endphp
 
-  <footer class="site-footer" style="display: block; ">
-    <div class="footer-top" style="background-image:url({{ asset('assets/img/bg2.png')}}); background-size: contain;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5  col-lg-5 col-sm-6 footer-col-4 ">
-                    <div class="widget">
-                        <h2  class="footer-title text-white"> @lang('site.queenland') </h2 >
-                        <p class="text-capitalize m-b20">
-                            @lang('site.footer_desc')
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-2 col-7 col-xl-2 col-lg-2 col-sm-6 footer-col-4">
-                    <div class="widget widget_services border-0">
-                        <h5 class="footer-title text-white">
-                            @lang('site.url')
-                        </h5>
-                        <ul>
-                            <li><a href="{{ route('homePage') }}">@lang('site.home')</a></li>
-                            <li><a href="{{ route('about') }}"> @lang('site.about') </a></li>
-                            <li><a href="{{ route('category') }}"> @lang('site.category') </a></li>
-                            <li><a href="{{ route('services') }}">@lang('site.services')</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-2 col-7 col-xl-2 col-lg-2 col-sm-6 footer-col-4">
-                    <div class="widget widget_services border-0">
-                        <h5 class="footer-title text-white">
-                            @lang('site.url')
-                        </h5>
-                        <ul>
-                            <li><a href="{{ route('news') }}"> @lang('site.media') </a></li>
-                            <li><a href="{{ route('contact') }}"> @lang('site.contact') </a></li>
-                            <li><a href="{{ route('faq') }}">  @lang('site.faq')  </a></li>
-                            <li><a href="{{ route('policy') }}">  @lang('site.policy')  </a></li>
-                        </ul>
-                    </div>
-                </div>
-                @if($contactInfo)
-                <div class="col-md-3 col-sm-6 footer-col-4">
-                    <div class="widget widget_getintuch">
-                        <h5 class="footer-title text-white ">
-                            @lang('site.contact')
-                        </h5>
-                        <ul>
-                            <li><i class="ti-location-pin"></i>
-                                <div class="contactInfo-data">
-                                  {!! html_entity_decode( $contactInfo[$lang.'_address']) !!}
-                                </div>
-                            </li>
-                            <li><i class="ti-mobile"></i>
-                                <div class="contactInfo-data">
-                                   {!! html_entity_decode( $contactInfo->phone) !!}
-                                </div>
-                            </li>
-                            <li><i class="ti-email"></i>
-                                <div class="contactInfo-data">
-                                   {!! html_entity_decode( $contactInfo->email) !!}
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                @endif
-
+<footer id="footer" class="bg-color-secondary custom-footer m-0" style="background: url('img/demos/church/footer-bg.jpg'); background-size: cover;">
+    <div class="container pt-5">
+        <div class="row text-center">
+            <div class="col">
+                <a href="demo-church.html" class="text-decoration-none">
+                    <img src="img/demos/church/logo-footer.png" width="123" height="48" alt class="img-fluid custom-img-fluid-center" />
+                </a>
             </div>
         </div>
-
-
-
-
-
-    </div>
-    <!-- footer bottom part -->
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-6 text-left "> <span>
-                    @lang('site.faq_copyright')
-                </span> </div>
-                <div class="col-md-6 col-sm-6 text-right ">
-                    <div class="widget-link ">
-                        <ul>
-
-                            <li><a href="{{ route('faq') }}">
-                                    @lang('site.faq_office')
-                                </a></li>
-                            <li><a href="{{ route('policy') }}">
-                                     @lang('site.policy')
-                                </a></li>
-                        </ul>
-                    </div>
-                </div>
+        <hr class="solid tall custom-hr-color-1">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-3 custom-sm-margin-bottom-1">
+                <i class="fas fa-map-marker-alt text-color-primary custom-icon-size-1"></i>
+                <p class="custom-text-color-2 alternative-font-4 text-3-5">
+                    <strong class="d-block text-color-light custom-secondary-font text-5-5 line-height-8 mb-1">  @lang('site.address')</strong>
+                    {!! html_entity_decode( $contactInfo[$lang.'_address']) !!}
+                </p>
+            </div>
+            <div class="col-lg-4 custom-sm-margin-bottom-1">
+                <i class="far fa-clock text-color-primary custom-icon-size-1"></i>
+                <p class="custom-text-color-2 alternative-font-4 text-3-5">
+                    <strong class="d-block text-color-light custom-secondary-font text-5-5 line-height-8 mb-1">Join us on</strong>
+                    Sunday Worship<br>
+                    8.00pm - 9.00pm
+                </p>
+            </div>
+            <div class="col-lg-3">
+                <i class="fas fa-phone-volume text-color-primary custom-icon-size-1"></i>
+                <p class="alternative-font-4 text-3-5">
+                    <strong class="d-block text-color-light custom-secondary-font text-5-5 line-height-8 mb-1">Call us now</strong>
+                    <a href="tel:+91123456789" class="text-decoration-none custom-text-color-2">    {!! html_entity_decode( $contactInfo->phone) !!}</a></br>
+                    <a href="mail:mail@example.com" class="text-decoration-none custom-text-color-2">{!! html_entity_decode( $contactInfo->email) !!}</a>
+                </p>
+            </div>
+        </div>
+        <hr class="solid tall custom-hr-color-1">
+        <div class="row text-center pb-5">
+            <div class="col">
+                <ul class="social-icons social-icons-clean custom-social-icons mb-3">
+                    <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="social-icons-googleplus"><a href="http://www.google.com/" target="_blank" title="Google Plus"><i class="fab fa-google-plus-g"></i></a></li>
+                    <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li class="social-icons-instagram"><a href="http://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+                <p class="alternative-font-4 text-3 text-color-light opacity-7">© Copyright 2021. All Rights Reserved.</p>
             </div>
         </div>
     </div>
+
+
 </footer>
-<div class="chating">
-<input type="checkbox" id="click">
-<label for="click">
-  <i class="fa fa-whatsapp" ></i>
-  <i class="fa fa-times"></i>
-</label>
-<div class="wrapper">
-  <div class="head-text">
-    راسنا الأن
-</div>
-<div class="chat-box">
-
-    <div class="desc-text">
-        كيف يمكننا مساعدتك ؟
-    </div>
-    <form action="{{ route('whatsappMessage') }}" method="POST" target="_blank">
-        @csrf
-        <input type="text" class="form-control" placeholder="أكتب أسمك" name="name" required />
-        <textarea type="text" name="message" rows="10" placeholder="أكتب رسالتك" required></textarea>
-        <input type="hidden" name="myPhone" value="201101200050">
-       <div class="field">
-         <button type="submit">أرسال </button>
-       </div>
-    </form>
-</div>
-</div>
-<!-- Footer END -->
 
 {{-- <form action="{{ route('whatsappMessage') }}" method="POST" target="_blank">
     @csrf

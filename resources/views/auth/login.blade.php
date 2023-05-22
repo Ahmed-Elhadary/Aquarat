@@ -6,12 +6,12 @@
 		<div class="container-login100 ">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-                    
+
 					<img src="{{ asset('dashboard/login/images/dash.jpg') }}" alt="IMG">
 				</div>
                     <form class="login100-form validate-form" method="POST" action="{{ route('login') }}">
                         @csrf
-                        <img class="admin-logo" src="{{ asset('assets/img/logo.jpg') }}" alt="">
+                        <img class="admin-logo" src="{{ asset('dashboard/login/images/Capture.PNG') }}" alt="">
 					<span class="login100-form-title">
 						Dashboard Login
 					</span>

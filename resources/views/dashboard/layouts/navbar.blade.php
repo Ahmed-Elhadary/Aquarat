@@ -1,7 +1,7 @@
 <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
-    <div class="app-header header-shadow bg-warning header-text-dark">
+    <div class="app-header header-shadow bg-primary header-text-dark">
         <div class="app-header__logo">
-            <div class="logo-src" style="background: transparent;">QueenLand </div>
+            <div class="logo-src" style="background: transparent;">MS</div>
 
             <div class="header__pane ml-auto">
                 <div>
@@ -74,12 +74,6 @@
 
                                 </div>
                             </div>
-
-
-
-
-
-
                         </div>
                     </div>
                 </div>
