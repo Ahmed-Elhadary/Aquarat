@@ -16,10 +16,13 @@ class CreateAboutCompaniesTable extends Migration
         Schema::create('about_companies', function (Blueprint $table) {
             $table->id();
             $table->string('image')->nullable();
+            $table->string('image2')->nullable();
+            $table->string('image3')->nullable();
+            $table->string('image4')->nullable();
             $table->string('years');
             $table->string('ar_company_name');
-            $table->string('en_company_name');
-            $table->longText('en_details');
+            $table->string('en_company_name')->nullable();
+            $table->longText('en_details')->nullable();
             $table->longText('ar_details');
             $table->timestamps();
         });

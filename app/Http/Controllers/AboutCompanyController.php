@@ -85,7 +85,35 @@ class AboutCompanyController extends Controller
                 ]);
             }
         }
-
+        if($request->has('image2')) {
+            if ($request->hasFile('image2')) {
+                $timestamp = str_replace([' ', ':'], '-', Carbon::now()->toDateTimeString());
+                $p_image2= $timestamp . '_' . $request->image2->getClientOriginalName();
+                $request->image2->move(public_path('/images/About/'), $p_image2);
+                $about_company->update([
+                    'image2' => $p_image2
+                ]);
+            }
+        }
+        if($request->has('image3')) {
+            if ($request->hasFile('image3')) {
+                $timestamp = str_replace([' ', ':'], '-', Carbon::now()->toDateTimeString());
+                $p_image3= $timestamp . '_' . $request->image3->getClientOriginalName();
+                $request->image3->move(public_path('/images/About/'), $p_image3);
+                $about_company->update([
+                    'image3' => $p_image3
+                ]);
+            }
+        }    if($request->has('image4')) {
+            if ($request->hasFile('image4')) {
+                $timestamp = str_replace([' ', ':'], '-', Carbon::now()->toDateTimeString());
+                $p_image4= $timestamp . '_' . $request->image4->getClientOriginalName();
+                $request->image4->move(public_path('/images/About/'), $p_image4);
+                $about_company->update([
+                    'image4' => $p_image4
+                ]);
+            }
+        }
 
         $about_company->update([
             'years' => $request->en_year,

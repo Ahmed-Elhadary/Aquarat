@@ -23,7 +23,7 @@
                   <tr>
                     <th>Background</th>
                     <th>Arabic Description</th>
-                    <th>English Description</th>
+                    {{--  <th>English Description</th>  --}}
                     <th width="110px">Action</th>
                   </tr>
                 </thead>
@@ -34,7 +34,7 @@
                             <img src="{{ asset('images/Slider/'.$slider->image)}}" width="70px" height="70px">
                         </td>
                         <td>{{ $slider->ar_description }}</td>
-                        <td>{{ $slider->en_description }}</td>
+                        {{--  <td>{{ $slider->en_description }}</td>  --}}
 
 
 

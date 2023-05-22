@@ -9,6 +9,6 @@ class AboutCompany extends Model
 {
     use HasFactory;
 
-    protected $fillable = ["image", "ar_year", "en_year", "ar_company_name", "en_company_name", "ar_details", "en_details"];
+    protected $fillable = ["image","image2","image3","image4", "ar_year", "ar_company_name", "ar_details"];
 
 }
