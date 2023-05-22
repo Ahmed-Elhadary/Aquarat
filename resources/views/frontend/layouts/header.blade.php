@@ -55,11 +55,11 @@ lang="en" dir="ltr" @endif>
         @import url('http://fonts.cdnfonts.com/css/cairo');
 
         body,
-        h1,
+        h1,a,button,
         span,
         h2,
         h3,
-        h4,
+        h4,strong,p,b,
         h5 , ul, li{
             font-family: 'Cairo', sans-serif;
         }

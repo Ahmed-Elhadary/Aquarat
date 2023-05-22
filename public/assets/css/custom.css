@@ -14,3 +14,7 @@
     background-image: none !important;
     border-color: #5575c8 #5575c8 #5575c8 !important;
 }
+
+.custom-thumb-info-4 .thumb-info-wrapper:after{
+    font-family: 'cairo' !important;
+}

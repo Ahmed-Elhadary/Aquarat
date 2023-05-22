@@ -21,9 +21,7 @@
                                 <div class="col-lg-7">
                                     <div
                                         class="d-flex flex-column justify-content-center align-items-center text-center h-100">
-                                        {{--  <span class="position-relative text-color-light text-6 line-height-5 font-weight-medium custom-secondary-font pe-4 mb-0 appear-animation" data-appear-animation="fadeInDownShorter" data-appear-animation-delay="500" data-plugin-options="{'minWindowWidth': 0}">
-                                    dfffffffffffffffffffffffffffffffff
-                                </span>  --}}
+
                                         <h1 class="text-color-light font-weight-extra-bold text-13 line-height-1 mb-2 appear-animation slider-text"
                                             data-appear-animation="fadeInUpShorter" data-appear-animation-delay="750"
                                             data-plugin-options="{'minWindowWidth': 0}">{{ $slider->ar_description }}</h1>
@@ -47,10 +45,10 @@
         </div>
     </div>
     @foreach ($aboutCompany as $about)
-        <section class="section section-no-border custom-position-relative custom-section-padding-1 bg-color-light m-0">
-            <img class="custom-cloud left-pos d-none d-md-block appear-animation"
+        <section class="section section-no-border custom-position-relative custom-section-padding-1 bg-color-light m-0" style="overflow: hidden !important">
+            {{--  <img class="custom-cloud left-pos d-none d-md-block appear-animation"
                 data-appear-animation="customFadeInLeftNoRotate" data-appear-animation-delay="0"
-                data-plugin-options="{'accY': -300}" src="{{ asset('images/About/' . $about->image) }}" alt />
+                data-plugin-options="{'accY': -300}" src="{{ asset('images/About/' . $about->image) }}" alt />  --}}
             <div class="custom-big-square left-pos d-none d-md-block custom-box-shadow appear-animation"
                 data-appear-animation="customFadeInLeft" data-appear-animation-delay="500"
                 data-plugin-options="{'accY': -300}"
@@ -59,9 +57,9 @@
                 data-appear-animation="customFadeInLeft" data-appear-animation-delay="1000"
                 data-plugin-options="{'accY': -300}"
                 style="background: url({{ asset('images/About/' . $about->image2) }}); background-size: cover;"></div>
-            <img class="custom-cloud right-pos d-none d-md-block appear-animation"
+            {{--  <img class="custom-cloud right-pos d-none d-md-block appear-animation"
                 data-appear-animation="customFadeInRightNoRotate" data-appear-animation-delay="0"
-                data-plugin-options="{'accY': -300}" src="{{ asset('images/About/' . $about->image) }}" alt />
+                data-plugin-options="{'accY': -300}" src="{{ asset('images/About/' . $about->image) }}" alt />  --}}
             <div class="custom-big-square right-pos d-none d-md-block custom-box-shadow appear-animation"
                 data-appear-animation="customFadeInRight" data-appear-animation-delay="500"
                 data-plugin-options="{'accY': -300}"
@@ -73,8 +71,8 @@
             <div class="container">
                 <div class="row justify-content-center text-center">
                     <div class="col-md-8 col-xl-10">
-                        <h2 class="font-weight-bold"> {{ $about[$lang . '_company_name'] }}</h2>
-                        <p> {{ $about[$lang . '_details'] }}</p>
+                        {{--  <h2 class="font-weight-bold"> {{ $about[$lang . '_company_name'] }}</h2>  --}}
+                        <p> {!! $about[$lang . '_details'] !!}</p>
                         <a href="{{ route('about') }}" class="btn btn-primary custom-btn-style-1 text-uppercase mt-4">
                             المزيد</a>
                     </div>
@@ -92,12 +90,13 @@
     </div>
 </section>  --}}
 
-    <section class="section section-no-border bg-color-light m-0">
+    <section class="section section-no-border bg-color-grey m-0">
+        <h2 style="text-align: center;
+        font-weight: 500;">أعمالنا </h2>
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div id="galleryAjaxBox" class="ajax-box ajax-box-init mb-4">
-
                         <div class="bounce-loader">
                             <div class="bounce1"></div>
                             <div class="bounce2"></div>
@@ -110,21 +109,23 @@
                 </div>
             </div>
             <div class="row" data-plugin-masonry data-plugin-options="{'itemSelector': '.col-lg-4'}">
+
                 @foreach ($products as $product)
                     <div class="col-lg-4">
                         <span class="thumb-info custom-thumb-info-4">
                             <a data-href="ajax/demo-church-gallery-ajax-on-page-1.html"
-                                class="text-decoration-none custom-secondary-font text-color-dark" data-ajax-on-page>
+                                class="text-decoration-none  text-color-dark" >
                                 <span class="thumb-info-wrapper">
-                                    <img src="{{ asset('images/Products/' . $product->image) }}" alt class="img-fluid" />
+                                    <img src="{{ asset('images/Products/' . $product->image) }}" alt class="img-fluid" style="height: 280px;
+                                    object-fit: cover;"/>
                                 </span>
                             </a>
                             <span class="thumb-info-caption custom-box-shadow">
                                 <span class="thumb-info-caption-text">
                                     <h2 class="font-weight-bold text-5 text-center">
                                         <a data-href="ajax/demo-church-gallery-ajax-on-page-1.html"
-                                            class="text-decoration-none custom-secondary-font text-color-dark"
-                                            data-ajax-on-page>
+                                            class="text-decoration-none  text-color-dark"
+                                            >
                                             {{ $product[$lang . '_name'] }}
                                         </a>
                                     </h2>
@@ -135,20 +136,16 @@
                 @endforeach
 
             </div>
+            <a href="{{ route('about') }}" class="btn btn-primary custom-btn-style-1 text-uppercase mt-4" style="    display: block;
+            width: 110px;
+            margin: auto;">
+                المزيد</a>
         </div>
     </section>
 
 
 
-    <section class="section section-no-border custom-position-relative custom-overflow-hidden p-0 m-0">
-        <div class="custom-view-our-location text-center">
-            <img src="img/demos/church/others/view-our-location.png" alt />
-            <a href="#" onclick="initMapAt({latitude: 40.75198, longitude: -73.96978, zoom: 16}, event)"
-                class="custom-view-location custom-secondary-font font-weight-bold text-color-light text-decoration-none">View
-                Our Location</a>
-        </div>
-        <div id="googlemaps" class="google-map"></div>
-    </section>
+
 @endsection
 
 @push('custom-scripts')

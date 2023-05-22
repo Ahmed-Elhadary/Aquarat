@@ -20,7 +20,7 @@ class homeController extends Controller
         $people = People::all()->take(4);
         $sliders = Slider::all();
         $reviews = ClientReview::all();
-        $products = Product::orderBy('id', 'desc')->take(10)->get();
+        $products = Product::orderBy('id', 'desc')->take(9)->get();
         $companies = Company::all();
         $contactInfo = ContactInfo::all()->first();
 
