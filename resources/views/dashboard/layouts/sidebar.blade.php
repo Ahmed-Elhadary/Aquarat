@@ -51,12 +51,12 @@
                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                     </a>
                     <ul>
-                        <li>
+                        {{--  <li>
                             <a class="{{ (request()->is('*dashboard/maincategory*')) ? 'mm-active' : '' }}" href="{{ route('maincategory.index') }}">
                                 <i class="metismenu-icon"></i>
                                 Main Category
                             </a>
-                        </li>
+                        </li>  --}}
                         <li>
                             <a class="{{ (request()->is('*dashboard/products*')) ? 'mm-active' : '' }}" href="{{ route('products.index') }}">
                                 <i class="metismenu-icon"></i>
@@ -65,7 +65,7 @@
                         </li>
                     </ul>
                 </li>
-                <li  class="{{ (request()->is('*dashboard/positions*') ||
+                {{--  <li  class="{{ (request()->is('*dashboard/positions*') ||
                     request()->is('*dashboard/people*')) ? 'mm-active' : '' }}">
                     <a href="#">
                         <i class="metismenu-icon pe-7s-users"></i>
@@ -86,7 +86,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li>  --}}
                 <li class="{{ (request()->is('*dashboard/company_date*') ||
                     request()->is('*dashboard/aboutcompany*') || request()->is('*dashboard/companyservice*') ||
                     request()->is('*dashboard/achievements*') || request()->is('*dashboard/contactInfo*')) ? 'mm-active' : '' }}">
@@ -102,30 +102,30 @@
                                 </i>Company Date
                             </a>
                         </li>  --}}
-                        <li >
+                        {{--  <li >
                             <a class="{{ (request()->is('*dashboard/companies*')) ? 'mm-active' : '' }}" href="{{ route('companies.index') }}">
                                 <i class="metismenu-icon pe-7s-stopwatch">
                                 </i>Companies
                             </a>
-                        </li>
+                        </li>  --}}
                         <li>
                             <a class="{{ (request()->is('*dashboard/aboutcompany*')) ? 'mm-active' : '' }}" href="{{ route('aboutcompany.index') }}">
                                 <i class="metismenu-icon">
                                 </i>About Company
                             </a>
                         </li>
-                        <li>
+                        {{--  <li>
                             <a class="{{ (request()->is('*dashboard/companyservice*')) ? 'mm-active' : '' }}" href="{{ route('companyservice.index') }}">
                                 <i class="metismenu-icon   pe-7s-tools">
                                 </i> Company Services
                             </a>
-                        </li>
-                        <li>
+                        </li>  --}}
+                        {{--  <li>
                             <a class="{{ (request()->is('*dashboard/achievements*')) ? 'mm-active' : '' }}" href="{{ route('achievements.index') }}">
                                 <i class="metismenu-icon pe-7s-pen"></i>
                                 Achievements
                             </a>
-                        </li>
+                        </li>  --}}
                         <li>
                             <a class="{{ (request()->is('*dashboard/contactInfo*')) ? 'mm-active' : '' }}" href="{{ route('contactInfo.index') }}">
                                 <i class="metismenu-icon pe-7s-pen"></i>
@@ -155,7 +155,7 @@
                        Blogs
                     </a>
                 </li>  --}}
-                <li>
+                {{--  <li>
                     <a class="{{ (request()->is('*dashboard/services*')) ? 'mm-active' : '' }}" href="{{ route('services.index') }}">
                         <i class="metismenu-icon   pe-7s-tools"></i>
                        Services
@@ -167,7 +167,7 @@
                         <i class="metismenu-icon  pe-7s-comment"></i>
                         Client Reviews
                     </a>
-                </li>
+                </li>  --}}
                 <li>
                     <a class="{{ (request()->is('*dashboard/sliders*')) ? 'mm-active' : '' }}" href="{{ route('sliders.index') }}">
                         <i class="metismenu-icon  pe-7s-photo-gallery"></i>
