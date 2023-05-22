@@ -22,7 +22,8 @@
 						<div class="row">
 							<div class="col-lg-7 col-sm-7">
 								<h2 class="font-weight-bold">{{ $about[$lang.'_company_name'] }}</h2>
-								<p>{{ $about[$lang.'_details'] }}</p>
+                                <br>
+								<p>{!! $about[$lang.'_details'] !!}</p>
 								{{--  <p class="text-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis mauris urna. Donec pellentesque eros non sapien malesuada, at facilisis diam interdum. Praesent non cursus dui, et consectetur risus. Pellentesque eu arcu sollicitudin, viverra neque ut, facilisis ligula. In faucibus tellus ac metus ullamcorper aliquet. Aliquam sem dui, cursus quis magna vitae, convallis malesuada tellus. Nam malesuada.</p>  --}}
 							</div>
 							<div class="col-lg-5 col-sm-5 d-none d-sm-block">

@@ -1,99 +1,105 @@
 @extends('frontend.layouts.app')
-@section('title',' المنتجات   ')
+@section('title',' ')
 @section('content')
 @php $lang = LaravelLocalization::getCurrentLocale(); @endphp
 
         <!-- Content -->
-        <div class="page-content bg-white">
-            <!-- Slider -->
 
-            <div class="category dlab-bnr-inr overlay-black-dark banner-content " style="background-image:url('{{ asset('assets/img/slide10.jpg') }}');">
-                <div class="container">
+				<section class="page-header page-header-modern page-header-background page-header-background-sm parallax overlay overlay-color-dark overlay-show overlay-op-1 my-0" data-plugin-parallax data-plugin-options="{'speed': 1.5}" data-image-src="{{ asset('Images/About/2021-04-07-22-44-03_image_4.jpg') }}">
+					<div class="container">
+						<div class="row my-5">
+							<div class="col-md-12 align-self-center text-center">
+								<h1 class="text-9 text-color-light custom-secondary-font font-weight-bold mb-1">  من نحن</h1>
+								<p class="text-color-light custom-secondary-font text-uppercase mb-0"> نبذة عنا</p>
+							</div>
+						</div>
+					</div>
+				</section>
 
-                    <div class="row dlab-bnr-inr-entry">
-                        <div class="col-12">
-                            <h1 class="text-white text-center"> @lang('site.products') </h1>
-                            <div class="searchbar">
-                                <form class="headerFilter" action="{{ route('search') }}" method="GET">
-                                <input class="global_search_input search_input" type="text" name="search" autocomplete="off" placeholder="@lang('site.search')" required>
-                                <button type="submit" class="search_icon ">
-                                    <i class="ti-search"></i>
-                                    <div class="spinner-border text-warning" role="status">
-                                    <span class="sr-only">@lang('site.loading')...</span>
-                                  </div>
-                                </button>
-                                </form>
-                                <div class="result-search-list"></div>
-                            </div>
-
-
-                            <div class="breadcrumb-row text-left">
-                                <ul class="list-inline">
-                                    <li><a href="{{ route('homePage') }}">@lang('site.home') </a></li>
-                                    <li><a href="{{ route('products',$mainCategory->id) }}">{{ $mainCategory[$lang.'_name'] }} </a></li>
-                                    <li>  @lang('site.products') </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Breadcrumb row -->
-
-                        <!-- Breadcrumb row END -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slider END -->
-            <!-- contact area -->
-            <div class="content-block">
-
-
-                <div class="section-full pt-4 portfolio text-uppercase bg-gray products-section" id="portfolio">
-                    <div class="container">
-
-                        <div class="headTitle">
-                            <h2> @lang('site.products')</h2>
-                             <svg width="180px" height="20px">
-                                        <line x1="0" y1="10" x2="180" y2="10" stroke="#9e9e9e" stroke-width="1px"></line>
-                                         <line x1="50" y1="10" x2="130" y2="10" stroke="#f7c800" stroke-width="6px"></line>
-                            </svg>
-                        </div>
+				<section class="section section-no-border bg-color-light m-0">
+					<div class="container">
+                        @foreach ($aboutCompany as $about)
+						<div class="row">
+							<div class="col-lg-7 col-sm-7">
+								<h2 class="font-weight-bold">{{ $about[$lang.'_company_name'] }}</h2>
+                                <br>
+								<p>{!! $about[$lang.'_details'] !!}</p>
+								{{--  <p class="text-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis mauris urna. Donec pellentesque eros non sapien malesuada, at facilisis diam interdum. Praesent non cursus dui, et consectetur risus. Pellentesque eu arcu sollicitudin, viverra neque ut, facilisis ligula. In faucibus tellus ac metus ullamcorper aliquet. Aliquam sem dui, cursus quis magna vitae, convallis malesuada tellus. Nam malesuada.</p>  --}}
+							</div>
+							<div class="col-lg-5 col-sm-5 d-none d-sm-block">
+								<div class="custom-box-squares">
+									<img class="custom-cloud left-pos-2" alt src="img/demos/church/others/left-cloud.png" />
+									<div class="custom-big-square left-pos-2 custom-box-shadow" style="background: url({{ asset('images/About/'.$about->image )}}); background-size: cover;"></div>
+									<div class="custom-small-square left-pos-2 custom-box-shadow" style="background: url({{ asset('images/About/'.$about->image2 )}}); background-size: cover;"></div>
+								</div>
+							</div>
+						</div>
+                        @endforeach
+					</div>
+				</section>
 
 
 
-
-                        <div class="row">
-
-                            @foreach ($products as $product )
-                                <div class="col-lg-3 col-md-6">
-
-                                    <div class="dlab-box m-b30 dlab-team1">
-                                        <div class="dlab-media">
-
-                                                <img width="358" height="460" alt="" src="{{ asset('images/Products/'.$product->image)}}">
-
-                                        </div>
-                                        <div class="dlab-info">
-                                            <a href="{{ route('viewProduct', $product->id) }}"><h4 class="dlab-title">{{ $product[$lang.'_name'] }}</h4></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            @endforeach
-                        </div>
-                        <div class="section-content box-sort-in m-b15">
-                            <div class="pagination-bx rounded pagination-sm clearfix">
-                                {{ $products->links('paginator') }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-            </div>
-        </div>
         <!-- Content END -->
-@endsection
 
+@endsection
+@push('custom-scripts')
+	<script>
+
+$(function () {
+    $('.timeline-nav').slick({
+        slidesToShow: 12,
+        slidesToScroll: 1,
+        asNavFor: '.timeline-slider',
+        centerMode: false,
+        focusOnSelect: true,
+        mobileFirst: true,
+        arrows: false,
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 8,
+                }
+            },
+            {
+                breakpoint: 0,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 2,
+                }
+            }
+        ]
+    });
+
+    $('.timeline-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        asNavFor: '.timeline-nav',
+        centerMode: true,
+        cssEase: 'ease',
+        edgeFriction: 0.5,
+        mobileFirst: true,
+        speed: 500,
+        responsive: [
+            {
+                breakpoint: 0,
+                settings: {
+                    centerMode: false
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    centerMode: true
+                }
+            }
+        ]
+    });
+
+});
+
+</script>
+@endpush
