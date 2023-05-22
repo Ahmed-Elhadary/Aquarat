@@ -22,8 +22,8 @@
                     <th>Image</th>
                     <th>Years</th>
                     <th>Arabic Company Name</th>
-                    <th>English Company Name</th>
-                    <th class="hiddenCols">English Details</th>
+                    {{--  <th>English Company Name</th>  --}}
+                    {{--  <th class="hiddenCols">English Details</th>  --}}
                     <th class="hiddenCols">Arabic Details</th>
 
                   </tr>
@@ -33,7 +33,7 @@
                     @foreach($about_company as $company)
                     <tr>
                         <td>
-                          
+
                       <a  href="{{route('aboutcompany.edit',$company->id)}}" class="edit_ancor btn btn-warning">
                         <i class="fa fa-edit"></i>
                       </a>
@@ -44,8 +44,8 @@
                         <td>{{ $company->years }}</td>
 
                         <td>{{ $company->ar_company_name }}</td>
-                        <td>{{ $company->en_company_name }}</td>
-                        <td >{{ $company->en_details}}</td>
+                        {{--  <td>{{ $company->en_company_name }}</td>  --}}
+                        {{--  <td >{{ $company->en_details}}</td>  --}}
                         <td>{{ $company->ar_details}}</td>
 
 

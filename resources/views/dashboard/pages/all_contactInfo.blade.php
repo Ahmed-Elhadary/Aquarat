@@ -24,7 +24,7 @@
                     <th>Email</th>
                     <th>Phone </th>
                     <th>Arabic Address </th>
-                    <th>English Address </th>
+                    {{--  <th>English Address </th>  --}}
                     <th>Action</th>
                   </tr>
                 </thead>
@@ -35,7 +35,7 @@
                         <td> {!! html_entity_decode(  $contact->email  ) !!} </td>
                         <td> {!! html_entity_decode(  $contact->phone  ) !!} </td>
                         <td> {!! html_entity_decode(  $contact->ar_address  ) !!} </td>
-                        <td> {!! html_entity_decode(  $contact->en_address  ) !!} </td>
+                        {{--  <td> {!! html_entity_decode(  $contact->en_address  ) !!} </td>  --}}
 
                        <td>
 

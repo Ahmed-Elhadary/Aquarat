@@ -22,7 +22,7 @@
                 <thead>
                   <tr>
                     <th>Arabic Name</th>
-                    <th>English Name</th>
+                    {{--  <th>English Name</th>  --}}
                     <th>Arabic Details</th>
                     <th>Image</th>
                     <th width="150px">Action</th>
@@ -32,7 +32,7 @@
                     @foreach($products as $product)
                     <tr>
                         <td>{{ $product->ar_name }}</td>
-                        <td>{{ $product->en_name }}</td>
+                        {{--  <td>{{ $product->en_name }}</td>  --}}
                         <td> {!! html_entity_decode( $product->ar_details ) !!} </td>
 
                         <td>

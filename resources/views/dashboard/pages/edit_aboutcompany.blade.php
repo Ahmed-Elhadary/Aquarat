@@ -1,5 +1,9 @@
 @extends('dashboard.layouts.app')
-
+<style>
+    .ck-editor__editable {
+    min-height: 250px !important;
+}
+</style>
 @section('content')
 <div class="app-page-title">
     <div class="page-title-wrapper">
@@ -45,41 +49,32 @@
                                 Looks good!
                             </div>
                         </div>
-                          <div class="col-md-12 mb-3">
+                          {{--  <div class="col-md-12 mb-3">
                             <label for="validationCustom02">English Company Name</label>
                             <input type="text" class="form-control" name="en_company_name" value="{{ $about_company->en_company_name }}"  placeholder="Arabic name"  required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
-                        </div>
+                        </div>  --}}
                         <div class="col-md-12 mb-3">
                             <label for="validationCustom02">Arabic Details</label>
-                            <textarea type="text" class="form-control" name="ar_details" placeholder="Arabic Details"  required>{{ $about_company->ar_details }}</textarea>
+                            <textarea type="text" class="form-control" name="ar_details" id="ar_details" placeholder="Arabic Details"  required>{{ $about_company->ar_details }}</textarea>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
-                        <div class="col-md-12 mb-3">
+                        {{--  <div class="col-md-12 mb-3">
                             <label for="validationCustom02">English Details</label>
                             <textarea type="text" class="form-control" name="en_details"  placeholder="English Details"  required>{{ $about_company->en_details }}</textarea>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
-                        </div>
+                        </div>  --}}
                         <div class="col-md-12 mb-3">
                             <label >Image *</label>
                             <div class="input-group mb-3">
                                 <div class="custom-file">
                                   <input type="file" class="custom-file-input" name="image" id="inputGroupFile02" >
-                                  <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
-                                </div>
-                              </div>
-                        </div>
-                        <div class="col-md-12 mb-3">
-                            <label >Image *</label>
-                            <div class="input-group mb-3">
-                                <div class="custom-file">
-                                  <input type="file" class="custom-file-input" name="image1" id="inputGroupFile02" >
                                   <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
                                 </div>
                               </div>
@@ -98,6 +93,15 @@
                             <div class="input-group mb-3">
                                 <div class="custom-file">
                                   <input type="file" class="custom-file-input" name="image3" id="inputGroupFile02" >
+                                  <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label >Image *</label>
+                            <div class="input-group mb-3">
+                                <div class="custom-file">
+                                  <input type="file" class="custom-file-input" name="image4" id="inputGroupFile02" >
                                   <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
                                 </div>
                               </div>
@@ -124,8 +128,27 @@
                         }, false);
                     })();
                 </script>
+
             </div>
         </div>
 
     </div>
 @endsection
+
+@push('custom-scripts')
+    <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor.create( document.querySelector( '#ar_details' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+
+            ClassicEditor.create( document.querySelector( '#en_details' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+
+    </script>
+
+@endpush
+

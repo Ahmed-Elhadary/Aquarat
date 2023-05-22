@@ -40,7 +40,7 @@
                     <div class="form-row ">
 
 
-                        <div class="form-group col-12">
+                        {{--  <div class="form-group col-12">
                             <label for="category_name"> Category *</label>
                             <select id='product_main_category_selected' name="main_category_id" class="form-control " required>
                                     <option></option>
@@ -48,14 +48,14 @@
                                         <option value='{{$mainCategory->id}}' >{{$mainCategory->ar_name}}</option>
                                     @endforeach
                                 </select>
-                          </div>
+                          </div>  --}}
 
 
-                        <div class="col-md-6 mb-3">
+                        {{--  <div class="col-md-6 mb-3">
                             <label >English Name</label>
                             <input type="text" class="form-control" name="en_name" placeholder="English name"  >
-                        </div>
-                        <div class="col-md-6 mb-3">
+                        </div>  --}}
+                        <div class="col-md-12 mb-3">
                             <label >Arabic Name *</label>
                             <input type="text" class="form-control" name="ar_name"  placeholder="Arabic name"  required>
                             <div class="valid-feedback">
@@ -65,19 +65,19 @@
 
                         <div class="col-md-12 mb-3">
                             <label >Arabic Details *</label>
-                            <textarea type="text" class="form-control " id="ar_details" name="ar_details"  placeholder="Arabic details" style="150px" required></textarea>
+                            <textarea type="text" class="form-control " id="ar_details" name="ar_details"  placeholder="Arabic details"  required></textarea>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
-
+{{--
                         <div class="col-md-12 mb-3">
                             <label >English Details</label>
                             <textarea type="text" class="form-control " id="en_details" name="en_details"  placeholder="English details" style="150px" ></textarea>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
-                        </div>
+                        </div>  --}}
                         <div class="col-md-12 mb-3">
                             <label >Image *</label>
                             <div class="input-group mb-3">

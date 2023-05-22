@@ -34,12 +34,12 @@
                 <form class="needs-validation " novalidate action="{{ route('sliders.store') }}" method="post"
                     enctype="multipart/form-data">
                     @csrf
-                    <div class="form-group mt-3">
+                    {{--  <div class="form-group mt-3">
                         <label for="slider" class="ml-2 mr-2">video</label>
                         <input type="radio" id="video" name="type" value="0" >
                         <label for="slider" class="ml-2 mr-2">image</label>
                         <input type="radio" id="image" name="type" value="1" checked>
-                    </div>
+                    </div>  --}}
                     <div class="form-row ">
                         <div class="col-md-12 mb-3 image">
                             <label>Image *</label>
@@ -50,7 +50,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12 mb-3 video d-none">
+                        {{--  <div class="col-md-12 mb-3 video d-none">
                             <label>Video *</label>
                             <div class="input-group mb-3">
                                 <div class="custom-file">
@@ -58,7 +58,7 @@
                                     <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
                                 </div>
                             </div>
-                        </div>
+                        </div>  --}}
                         <div class="col-md-12 mb-3">
                             <label>Arabic Description *</label>
                             <textarea type="text" class="form-control" name="ar_description" maxlength="200" placeholder="Arabic Discription"
@@ -68,11 +68,11 @@
                                 Looks good!
                             </div>
                         </div>
-                        <div class="col-md-12 mb-3">
+                        {{--  <div class="col-md-12 mb-3">
                             <label>English Description</label>
                             <textarea type="text" class="form-control" name="en_description" maxlength="200" placeholder="English Discription"></textarea>
                             maximum length of 200 characters
-                        </div>
+                        </div>  --}}
 
                     </div>
                     <button class="btn btn-warning" type="submit">Add New</button>
@@ -101,7 +101,7 @@
     </div>
 @endsection
 @push('custom-scripts')
-    <script>
+    {{--  <script>
         $('input[name="type"]').on('click', function() {
             var type = $("input[name='type']:checked").val();
             console.log(type);
@@ -117,5 +117,5 @@
 
             }
         });
-    </script>
+    </script>  --}}
 @endpush

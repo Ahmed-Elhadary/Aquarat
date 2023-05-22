@@ -53,12 +53,12 @@
                             <textarea  class="form-control" name="ar_address" id="ar_address" placeholder=" Arabic Address"  required>{{ $contactInfo->ar_address }}</textarea>
                         </div>
                     </div>
-                    <div class="form-row ">
+                    {{--  <div class="form-row ">
                         <div class="col-md-12 mb-3">
                             <label for="validationCustom02">English Address *</label>
                             <textarea  class="form-control" name="en_address" id="en_address" placeholder=" English Address"  required>{{ $contactInfo->en_address }}</textarea>
                         </div>
-                    </div>
+                    </div>  --}}
 
                 @method('put')
                     <button class="btn btn-warning" type="submit">Update</button>
