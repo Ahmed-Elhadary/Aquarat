@@ -7,7 +7,7 @@
         <div class="page-content bg-white">
             <!-- Slider -->
 
-            <section class="page-header page-header-modern page-header-background page-header-background-sm parallax overlay overlay-color-dark overlay-show overlay-op-1 my-0" data-plugin-parallax data-plugin-options="{'speed': 1.5}" data-image-src="{{ asset('Images/About/2021-04-07-22-44-03_image_4.jpg') }}">
+            <section class="page-header page-header-modern page-header-background page-header-background-sm parallax overlay overlay-color-dark overlay-show overlay-op-1 my-0" data-plugin-parallax data-plugin-options="{'speed': 1.5}" data-image-src="{{ asset('Images/1.jpeg') }}">
                 <div class="container">
                     <div class="row my-5">
                         <div class="col-md-12 align-self-center text-center">
@@ -18,7 +18,7 @@
                 </div>
             </section>
 
-        	<div class="container mt-5 mt-lg-0">
+        	<div class="container mt-5 mt-lg-0 pt-5 pb-5">
                 <div class="row">
                     <div class="col-lg-6 text-center pb-3 pb-lg-0 mb-5 mb-lg-0">
                         <span class="d-block text-color-grey positive-ls-2 font-weight-normal custom-font-size-2 text-color-light opacity-6 mb-1">GET IN TOUCH</span>
@@ -31,7 +31,7 @@
                                         <div data-plugin-float-element data-plugin-options="{'startPos': 'top', 'speed': 0.2, 'isInsideSVG': true, 'transition': true, 'transitionDuration': 2000}">
                                             <img class="icon-animated" width="55" src="{{ asset('Images/contactus/icon-location.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary mb-3'}" />
                                             <h4 class="font-weight-bold text-color-secondary text-5 mb-0">العنوان</h4>
-                                            <p class="text-4 text-color-light opacity-5 font-weight-light mb-0">  {!! html_entity_decode( $contactInfo['ar_address']) !!}</p>
+                                            <p class=" mb-0">  {!! html_entity_decode( $contactInfo['ar_address']) !!}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -40,7 +40,10 @@
                                         <div data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.1, 'isInsideSVG': true, 'transition': true, 'transitionDuration': 2000}">
                                             <img class="icon-animated" width="55" src="{{ asset('Images/contactus/icon-mail.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-secondary mb-3'}" />
                                             <h4 class="font-weight-bold text-color-secondary text-5 mb-0">البريد الالكتروني</h4>
-                                            <a href="mailto:email@domain.com" class="text-4 text-color-light text-color-hover-primary opacity-5 font-weight-light mb-0">   {!! html_entity_decode( $contactInfo->email) !!}</a>
+                                            <a href="mailto:email@domain.com" class="font-weight-light mb-0">   {!! html_entity_decode( $contactInfo->email) !!}</a>
+
+
+
                                         </div>
                                     </div>
                                 </div>
@@ -52,8 +55,8 @@
                                     <div class="col">
                                         <div data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.2, 'isInsideSVG': true, 'transition': true, 'transitionDuration': 2000}">
                                             <img class="icon-animated" width="55" src="{{ asset('Images/contactus/icon-phone.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-secondary mb-3'}" />
-                                            <h4 class="font-weight-bold text-color-secondary text-5 mb-0">ارقامنا</h4>
-                                            <a href="tel:+1234567890" class="text-4 text-color-light text-color-hover-primary opacity-5 font-weight-light mb-0">  {!! html_entity_decode( $contactInfo->phone) !!}</a>
+                                            <h4 class="font-weight-bold text-5 mb-0">ارقامنا</h4>
+                                            <a href="tel:+1234567890" class=" font-weight-light mb-0">  {!! html_entity_decode( $contactInfo->phone) !!}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -101,7 +104,9 @@
                                     </div>
                                     <div class="row">
                                         <div class="form-group col text-center">
-                                            <input type="submit" value="ارسال" class="btn btn-gradient text-3 font-weight-bold px-5 py-3" >
+                                            <button type="submit"  class="btn  text-3 font-weight-bold px-5 py-3" style="background: #5595c8;
+                                            color: #FFF;
+                                            padding: 8px 25px !important;">ارسال</button>
                                         </div>
                                     </div>
                                 </form>

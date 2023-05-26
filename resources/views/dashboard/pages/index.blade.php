@@ -96,7 +96,7 @@
                   <div class="card-body">
                     <div class="row">
                       <div class="col">
-                        <h5 class="card-title text-uppercase text-muted mb-0">Products</h5>
+                        <h5 class="card-title text-uppercase text-muted mb-0"> Our business</h5>
                         <span class="h2 card-number font-weight-bold mb-0">{{ $product->count() }}</span>
                       </div>
                       <div class="col-auto">

@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-6">
                 <div class="page-title-heading">
-                    <div>Add Product
+                    <div>Add gallary
                     </div>
                 </div>
             </div>

@@ -6,7 +6,7 @@
                 <div class="header-column">
                     <div class="header-row">
                         <div class="header-logo">
-                            <a href="demo-church.html">
+                            <a href="{{ route('homePage') }}">
                                 <img alt="Porto" width="123" height="68" src="{{ asset('dashboard/login/images/Capture.PNG') }}">
                             </a>
                         </div>
@@ -19,23 +19,23 @@
                                 <nav class="collapse">
                                     <ul class="nav nav-pills" id="mainNav">
                                         <li>
-                                            <a class="nav-link active" href="{{ route('homePage') }}">
+                                            <a class="nav-link @if (request()->is('/')) active @endif" href="{{ route('homePage') }}">
                                                 الصفحة الرئيسية
                                             </a>
                                         </li>
-                                        <li class="dropdown dropdown-full-color dropdown-primary">
-                                            <a class="dropdown-item dropdown-toggle" href="{{ route('about') }}">
+                                        <li >
+                                            <a class="nav-link @if (request()->is('about')) active @endif" href="{{ route('about') }}">
                                                 من نحن
                                             </a>
 
                                         </li>
                                         <li>
-                                            <a class="nav-link" href="{{ route('services') }}">
+                                            <a class="nav-link  @if (request()->is('services')) active @endif" href="{{ route('services') }}">
                                                 أعمالنا
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="nav-link" href="{{ route('contact') }}">
+                                            <a class="nav-link  @if (request()->is('contact')) active @endif" href="{{ route('contact') }}">
                                                 تواصل معنا
                                             </a>
                                         </li>

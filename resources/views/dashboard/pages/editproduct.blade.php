@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-6">
                 <div class="page-title-heading">
-                    <div>Edit Product
+                    <div>Edit gallary
                     </div>
                 </div>
             </div>

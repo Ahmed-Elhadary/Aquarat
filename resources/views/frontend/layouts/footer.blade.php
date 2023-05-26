@@ -31,7 +31,6 @@
                 <p class="alternative-font-4 text-3-5">
                     <strong class="d-block text-color-light  text-5-5 line-height-8 mb-1">ارقامنا  </strong>
                     <a href="tel:+91123456789" class="text-decoration-none ">    {!! html_entity_decode( $contactInfo->phone) !!}</a></br>
-                    <a href="tel:+91123456789" class="text-decoration-none ">    {!! html_entity_decode( $contactInfo->phone) !!}</a>
                     {{--  <a href="mail:mail@example.com" class="text-decoration-none ">{!! html_entity_decode( $contactInfo->email) !!}</a>  --}}
                 </p>
             </div>

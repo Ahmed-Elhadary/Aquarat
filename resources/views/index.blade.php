@@ -136,7 +136,7 @@
                 @endforeach
 
             </div>
-            <a href="{{ route('about') }}" class="btn btn-primary custom-btn-style-1 text-uppercase mt-4" style="    display: block;
+            <a href="{{ route('services') }}" class="btn btn-primary custom-btn-style-1 text-uppercase mt-4" style="    display: block;
             width: 110px;
             margin: auto;">
                 المزيد</a>

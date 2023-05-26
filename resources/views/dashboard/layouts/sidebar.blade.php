@@ -43,27 +43,33 @@
                 </li>
                 <li class="app-sidebar__heading">Components</li>
 
-                <li class="{{ (request()->is('*dashboard/maincategory*') ||
+                {{--  <li class="{{ (request()->is('*dashboard/maincategory*') ||
                     request()->is('*dashboard/products*')) ? 'mm-active' : '' }}">
                     <a href="">
                         <i class="metismenu-icon pe-7s-box1"></i>
-                        Products
+                        Our business
                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                     </a>
                     <ul>
-                        {{--  <li>
+                        <li>
                             <a class="{{ (request()->is('*dashboard/maincategory*')) ? 'mm-active' : '' }}" href="{{ route('maincategory.index') }}">
                                 <i class="metismenu-icon"></i>
                                 Main Category
                             </a>
-                        </li>  --}}
+                        </li>
                         <li>
                             <a class="{{ (request()->is('*dashboard/products*')) ? 'mm-active' : '' }}" href="{{ route('products.index') }}">
                                 <i class="metismenu-icon"></i>
-                                Product
+                                Our business
                             </a>
                         </li>
                     </ul>
+                </li>  --}}
+                <li>
+                    <a href="{{ route('products.index') }}" class=" {{ (request()->is('*dashboard/products*')) ? 'mm-active' : '' }}">
+                        <i class="metismenu-icon pe-7s-display2"></i>
+                        Our business
+                    </a>
                 </li>
                 {{--  <li  class="{{ (request()->is('*dashboard/positions*') ||
                     request()->is('*dashboard/people*')) ? 'mm-active' : '' }}">
