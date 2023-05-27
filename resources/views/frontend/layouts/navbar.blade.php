@@ -35,6 +35,11 @@
                                             </a>
                                         </li>
                                         <li>
+                                            <a class="nav-link  @if (request()->is('reviews')) active @endif" href="{{ route('reviews') }}">
+                                                 شهاداتنا
+                                            </a>
+                                        </li>
+                                        <li>
                                             <a class="nav-link  @if (request()->is('contact')) active @endif" href="{{ route('contact') }}">
                                                 تواصل معنا
                                             </a>

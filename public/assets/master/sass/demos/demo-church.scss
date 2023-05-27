@@ -224,7 +224,7 @@ p {
 }
 
 .custom-margin-1 {
-	margin-#{$left}: 95px;
+	margin-#{$left}: 203px;
 }
 
 .custom-negative-margin-1 {
@@ -524,7 +524,7 @@ p {
 // Carousel Slider
 .custom-carousel-arrows-style-1 {
 	.owl-nav {
-		.owl-next, 
+		.owl-next,
 		.owl-prev {
 			width: 45px !important;
 			height: 80px !important;
@@ -629,7 +629,7 @@ p {
 					transform: rotate(0);
 				}
 			}
-			
+
 			button.owl-next {
 				#{$right}: 10px;
 				@include if-rtl() {
@@ -692,7 +692,7 @@ p {
 		    position: absolute;
 		    left: 50%;
 			bottom: 10px;
-		    transform: translateX(-50%);			
+		    transform: translateX(-50%);
 		}
 	}
 
@@ -903,7 +903,7 @@ p {
 		.form-control.custom-xs-mb {
 			margin-bottom: 15px;
 		}
-	}	
+	}
 }
 
 .custom-thumb-carousel {
@@ -956,7 +956,7 @@ p {
 	.thumb-info-caption {
     	display: block;
 		padding: 20px 40px;
-		
+
 		.custom-thumb-info-wrapper-box {
 			float: left;
 		    width: 100%;

@@ -4,54 +4,45 @@
 
     @php $lang = LaravelLocalization::getCurrentLocale(); @endphp
 
-    <div class="dlab-bnr-inr overlay-black-dark banner-content " style="background-image:url(assets/img/slide10.jpg);">
+
+    <section class="page-header page-header-modern page-header-background page-header-background-sm parallax overlay overlay-color-dark overlay-show overlay-op-1 my-0" data-plugin-parallax data-plugin-options="{'speed': 1.5}" data-image-src="{{ asset('Images/1.jpeg') }}">
         <div class="container">
-            <span class="text-bg"> @lang('site.about_company') </span>
-            <div class="dlab-bnr-inr-entry">
-                <h1 class="text-white"> @lang('site.about_company')</h1>
-                <!-- Breadcrumb row -->
-                <div class="breadcrumb-row">
-                    <ul class="list-inline">
-                        <li><a href="{{ route('homePage') }}"> @lang('site.home')</a></li>
-                        <li> @lang('site.about_company') </li>
-                    </ul>
-                </div>
-                <!-- Breadcrumb row END -->
-            </div>
-        </div>
-    </div>
-
-    <!-- single article section -->
-
-    <div class="mt-3 mb-3">
-        <div class="container">
-
-            <div class="col-lg-12">
-                <div class="single-article-section">
-                    <div class="single-article-text">
-
-                        <img src="{{ asset('images/Blog/' . $blog->image) }}" alt="" srcset="" style="height: 300px;
-                                width: 400px;
-                                object-fit: contain;
-                                border: 1px solid #DDD;
-        margin-bottom: 10px;">
-
-                        <!-- <p class="blog-meta">
-                                <span class="author"><i class="fas fa-user"></i> @lang('site.admin')</span>
-                                <span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
-                            </p> -->
-
-                        <h2>{{ $blog[$lang . '_title'] }}</h2>
-                        <p>{{ $blog[$lang . '_description'] }}</p>
-
-                    </div>
-
-
-
+            <div class="row my-5">
+                <div class="col-md-12 align-self-center text-center">
+                    <h1 class="text-9 text-color-light custom-secondary-font font-weight-bold mb-1">   شهاداتنا</h1>
+                    <p class="text-color-light custom-secondary-font text-uppercase mb-0">  بعض شهاداتنا</p>
                 </div>
             </div>
-
         </div>
-    </div>
-    <!-- end single article section -->
+    </section>
+
+    <section class="section section-no-border bg-color-light m-0">
+        <div class="container">
+
+            <div class="row">
+                @foreach ($ClientReviews as $ClientReview)
+                <div class="col-lg-3 col-sm-6">
+                    <span class="thumb-info custom-thumb-info-3 custom-box-shadow-2">
+                        <span class="thumb-info-wrapper">
+                            <a href="_blank"  class="text-decoration-none">
+                                <img height="235px;" src="{{ asset('images/Reviews/'.$ClientReview->image)}}"/>
+                            </a>
+                        </span>
+                        <span class="thumb-info-caption">
+                            <span class="thumb-info-caption-text">
+                                <h4 class="font-weight-bold custom-primary-font mb-0 mt-3">
+                                    <a href="demo-church-about-us-staff-detail.html" class="text-color-dark text-decoration-none">
+                                        {{ $ClientReview->ar_name }}
+                                    </a>
+                                </h4>
+                            </span>
+                        </span>
+                    </span>
+                </div>
+                @endforeach
+
+            </div>
+        </div>
+    </section>
+
 @endsection
