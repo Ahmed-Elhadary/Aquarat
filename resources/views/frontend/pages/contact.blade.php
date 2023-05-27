@@ -21,56 +21,17 @@
         	<div class="container mt-5 mt-lg-0 pt-5 pb-5">
                 <div class="row">
                     <div class="col-lg-6 text-center pb-3 pb-lg-0 mb-5 mb-lg-0">
-                        <span class="d-block text-color-grey positive-ls-2 font-weight-normal custom-font-size-2 text-color-light opacity-6 mb-1">GET IN TOUCH</span>
-                        <h2 class="font-weight-bold text-color-light text-10 mb-5">تواصل معنا</h2>
+
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="800">
+								<h1 class="mt-5 mb-5">تواصل معنا</h1>
+								<ul class="list list-icons list-icons-style-2 mt-2" style="font-size: 18px">
+									<li> <strong class="text-dark"> العنوان:  </strong> {!! html_entity_decode( $contactInfo['ar_address']) !!}</li>
+									<li> <strong class="text-dark">ارقامنا : </strong> {!! html_entity_decode( $contactInfo->phone) !!}</li>
+									<li> <strong class="text-dark">  البريد الالكترونى: </strong> <a > {!! html_entity_decode( $contactInfo->email) !!}</a></li>
+								</ul>
+							</div>
 
-                                <div class="row pb-5 mb-5">
-                                    <div class="col">
-                                        <div data-plugin-float-element data-plugin-options="{'startPos': 'top', 'speed': 0.2, 'isInsideSVG': true, 'transition': true, 'transitionDuration': 2000}">
-                                            <img class="icon-animated" width="55" src="{{ asset('Images/contactus/icon-location.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary mb-3'}" />
-                                            <h4 class="font-weight-bold text-color-secondary text-5 mb-0">العنوان</h4>
-                                            <p class=" mb-0">  {!! html_entity_decode( $contactInfo['ar_address']) !!}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <div data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.1, 'isInsideSVG': true, 'transition': true, 'transitionDuration': 2000}">
-                                            <img class="icon-animated" width="55" src="{{ asset('Images/contactus/icon-mail.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-secondary mb-3'}" />
-                                            <h4 class="font-weight-bold text-color-secondary text-5 mb-0">البريد الالكتروني</h4>
-                                            <a href="mailto:email@domain.com" class="font-weight-light mb-0">   {!! html_entity_decode( $contactInfo->email) !!}</a>
-
-
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-lg-6 pt-5">
-
-                                <div class="row pb-5 mb-5">
-                                    <div class="col">
-                                        <div data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.2, 'isInsideSVG': true, 'transition': true, 'transitionDuration': 2000}">
-                                            <img class="icon-animated" width="55" src="{{ asset('Images/contactus/icon-phone.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-secondary mb-3'}" />
-                                            <h4 class="font-weight-bold text-5 mb-0">ارقامنا</h4>
-                                            <a href="tel:+1234567890" class=" font-weight-light mb-0">  {!! html_entity_decode( $contactInfo->phone) !!}</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                {{--  <div class="row">
-                                    <div class="col">
-                                        <div data-plugin-float-element data-plugin-options="{'startPos': 'bottom', 'speed': 0.1, 'isInsideSVG': true, 'transition': true, 'transitionDuration': 2000}">
-                                            <img class="icon-animated" width="55" src="{{ asset('Images/contactus/icon-calendar.svg') }}" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary mb-3'}" />
-                                            <h4 class="font-weight-bold text-color-light text-5 mb-0">Working Days/Hours</h4>
-                                            <p class="text-4 text-color-light opacity-5 font-weight-light mb-0">Mon - Sun / 9:00AM - 8:00PM</p>
-                                        </div>
-                                    </div>
-                                </div>  --}}
-
-                            </div>
                         </div>
                     </div>
                     <div class="col-lg-6 ps-lg-5">

@@ -12,7 +12,7 @@ class Product extends Model
 
     public function maincategory()
     {
-        return $this->belongsTo("\App\Models\Modelbackend\MainCategory");
+        return $this->belongsTo("\App\Models\Modelbackend\MainCategory",'main_category_id');
     }
 
 }

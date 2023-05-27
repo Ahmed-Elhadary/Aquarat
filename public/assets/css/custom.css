@@ -18,3 +18,9 @@
 .custom-thumb-info-4 .thumb-info-wrapper:after{
     font-family: 'cairo' !important;
 }
+
+.custom-thumb-info-4 .thumb-info-wrapper:after
+{
+    content: "" !important;
+}
+

@@ -60,8 +60,9 @@ lang="en" dir="ltr" @endif>
         h2,
         h3,
         h4,strong,p,b,
-        h5 , ul, li{
-            font-family: 'Cairo', sans-serif;
+        h5 , ul, li,.custom-secondary-font{
+            font-family: 'Cairo', sans-serif !important;
+            font-weight: bold !important;
         }
     </style>
 </head>

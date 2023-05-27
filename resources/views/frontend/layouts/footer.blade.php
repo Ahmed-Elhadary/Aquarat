@@ -16,26 +16,26 @@
                 <i class="fas fa-map-marker-alt  custom-icon-size-1"></i>
                 <p class="custom-text-color-2 alternative-font-4 text-3-5">
                     <strong class="d-block text-color-light  text-5-5 line-height-8 mb-1">  @lang('site.address')</strong>
-                    {!! html_entity_decode( $contactInfo[$lang.'_address']) !!}
+                   <a  style="font-size: 18px;"> {!! html_entity_decode( $contactInfo[$lang.'_address']) !!} </a>
                 </p>
             </div>
             <div class="col-lg-4 custom-sm-margin-bottom-1">
                 <i class="far fa-clock  custom-icon-size-1"></i>
-                <p class="custom-text-color-2 alternative-font-4 text-3-5">
+                <p class="custom-text-color-2 alternative-font-4 text-3-5" >
                     <strong class="d-block text-color-light  text-5-5 line-height-8 mb-1">البريد الإلكترونى</strong>
-                    {!! html_entity_decode( $contactInfo->email) !!}
+                    <a  style="font-size: 18px;">{!! html_entity_decode( $contactInfo->email) !!}</a>
                 </p>
             </div>
             <div class="col-lg-3">
                 <i class="fas fa-phone-volume  custom-icon-size-1"></i>
                 <p class="alternative-font-4 text-3-5">
                     <strong class="d-block text-color-light  text-5-5 line-height-8 mb-1">ارقامنا  </strong>
-                    <a href="tel:+91123456789" class="text-decoration-none ">    {!! html_entity_decode( $contactInfo->phone) !!}</a></br>
+                    <a class="text-decoration-none " style="font-size: 18px;">    {!! html_entity_decode( $contactInfo->phone) !!}</a></br>
                     {{--  <a href="mail:mail@example.com" class="text-decoration-none ">{!! html_entity_decode( $contactInfo->email) !!}</a>  --}}
                 </p>
             </div>
         </div>
-        <hr class="solid tall custom-hr-color-1">
+        <hr class="solid tall custom-hr-color-1" style="margin: 25px 0;">
         <div class="row text-center pb-4" >
             <div class="col">
                 {{--  <ul class="social-icons social-icons-clean custom-social-icons mb-3">
@@ -44,7 +44,7 @@
                     <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
                     <li class="social-icons-instagram"><a href="http://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
                 </ul>  --}}
-                <p class=" text-3 text-color-light opacity-7"> © 2022 - 2023   جميع الحقوق محفوظة .</p>
+                <p class=" text-3 text-color-light opacity-7" > © 2022 - 2023   جميع الحقوق محفوظة .</p>
             </div>
         </div>
     </div>
