@@ -21,7 +21,7 @@
 
             <div class="row">
                 @foreach ($ClientReviews as $ClientReview)
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-4 col-sm-6 mt-3">
                     <span class="thumb-info custom-thumb-info-3 custom-box-shadow-2">
                         <span class="thumb-info-wrapper">
                             <a href="_blank"  class="text-decoration-none">

@@ -91,7 +91,7 @@ Route::group(['namespace'=>'Front'] , function () {
     Route::get('services',[FrontServicesController::class,'index'])->name('services');
     Route::get('product/{id}',[viewProductController::class,'index'])->name('viewProduct');
     Route::get('/search', [viewProductController::class,'search'])->name('search');
-    Route::get('/news', [NewsController::class,'index'])->name('news');
+    Route::get('/ourservices', [NewsController::class,'index'])->name('ourservices');
     Route::get('/reviews', [NewsController::class,'reviews'])->name('reviews');
 
 
