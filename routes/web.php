@@ -92,7 +92,7 @@ Route::group(['namespace'=>'Front'] , function () {
     Route::get('product/{id}',[viewProductController::class,'index'])->name('viewProduct');
     Route::get('/search', [viewProductController::class,'search'])->name('search');
     Route::get('/news', [NewsController::class,'index'])->name('news');
-    Route::get('/single-news/{id}', [NewsController::class,'single'])->name('single.news');
+    Route::get('/reviews', [NewsController::class,'reviews'])->name('reviews');
 
 
     Route::get('/autoComplete',[viewProductController::class,'autoComplete'])->name('autoComplete');

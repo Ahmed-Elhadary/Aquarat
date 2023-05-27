@@ -23,6 +23,7 @@
 
 		<!-- Demo -->
 		<script src="{{ asset('assets/js/demo-church.js') }}"></script>
+		<script src="{{ asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}"></script>
 
 		<!-- Theme Custom -->
 		<script src="{{  asset('assets/js/custom.js') }}"></script>

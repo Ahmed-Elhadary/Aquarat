@@ -44,6 +44,35 @@
             <button type="button" role="presentation" class="owl-next"></button>
         </div>
     </div>
+
+
+
+    <section class="section section-tertiary section-no-border m-0">
+        <div class="container">
+
+            <div class="row">
+                <div class="col">
+                    <article class="custom-post-event bg-color-light p-4">
+                        <div class="post-event-date  text-center">
+                            <img src="{{ asset('images/Blog/' . $blog->image) }}" alt class="img-fluid" style="height: 180px;
+                            object-fit: cover;
+                            width: 190px;"/>
+                        </div>
+                        <div class="post-event-content  ps-2" style="margin-right:203px;">
+                            <h4 class="font-weight-bold text-color-dark">
+                                <span class="text-decoration-none custom-secondary-font text-color-dark">
+                                   {{ $blog->ar_title}}
+                                </span>
+                            </h4>
+                            <p>{!! $blog->ar_description !!}</p>
+
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
     @foreach ($aboutCompany as $about)
         <section class="section section-no-border custom-position-relative custom-section-padding-1 bg-color-light m-0" style="overflow: hidden !important">
             {{--  <img class="custom-cloud left-pos d-none d-md-block appear-animation"
@@ -145,7 +174,67 @@
 
 
 
+	<div class="row">
+        <div class="col">
+            <hr class="solid my-5">
+        </div>
+    </div>
 
+    <div class="row">
+        <div class="col">
+            <h4>Show Navigation on Hover</h4>
+            <div class="owl-carousel owl-theme show-nav-hover" data-plugin-options="{'items': 6, 'margin': 10, 'loop': false, 'nav': true, 'dots': false}">
+                <div>
+                    <img alt="" class="img-fluid rounded" src="{{ asset('Images/1.jpeg') }}">
+                </div>
+                <div>
+                    <img alt="" class="img-fluid rounded" src="{{ asset('Images/About/2023-05-22-16-02-14_cat1.jpg') }}">
+                </div>
+                <div>
+                    <img alt="" class="img-fluid rounded" src="img/projects/project-1.jpg">
+                </div>
+                <div>
+                    <img alt="" class="img-fluid rounded" src="img/projects/project-2.jpg">
+                </div>
+                <div>
+                    <img alt="" class="img-fluid rounded" src="img/projects/project-3.jpg">
+                </div>
+                <div>
+                    <img alt="" class="img-fluid rounded" src="img/projects/project-4.jpg">
+                </div>
+                <div>
+                    <img alt="" class="img-fluid rounded" src="img/projects/project-3.jpg">
+                </div>
+                <div>
+                    <img alt="" class="img-fluid rounded" src="img/projects/project-4.jpg">
+                </div>
+                <div>
+                    <img alt="" class="img-fluid rounded" src="img/projects/project-5.jpg">
+                </div>
+                <div>
+                    <img alt="" class="img-fluid rounded" src="img/projects/project-6.jpg">
+                </div>
+                <div>
+                    <img alt="" class="img-fluid rounded" src="img/projects/project-7.jpg">
+                </div>
+                <div>
+                    <img alt="" class="img-fluid rounded" src="img/projects/project-1.jpg">
+                </div>
+                <div>
+                    <img alt="" class="img-fluid rounded" src="img/projects/project-2.jpg">
+                </div>
+                <div>
+                    <img alt="" class="img-fluid rounded" src="img/projects/project-3.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <hr class="solid my-5">
+        </div>
+    </div
 @endsection
 
 @push('custom-scripts')

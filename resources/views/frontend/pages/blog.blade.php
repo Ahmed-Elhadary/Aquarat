@@ -4,88 +4,45 @@
 @section('content')
 @php $lang = LaravelLocalization::getCurrentLocale(); @endphp
 
-<div class="dlab-bnr-inr overlay-black-dark banner-content " style="background-image:url(assets/img/slide10.jpg);">
+<section class="page-header page-header-modern page-header-background page-header-background-sm parallax overlay overlay-color-dark overlay-show overlay-op-1 my-0" data-plugin-parallax data-plugin-options="{'speed': 1.5}" data-image-src="{{ asset('Images/1.jpeg') }}">
     <div class="container">
-        <span class="text-bg">  @lang('site.media_center')</span>
-        <div class="dlab-bnr-inr-entry">
-            <h1 class="text-white" > @lang('site.media_center')</h1>
-            <!-- Breadcrumb row -->
-            <div class="breadcrumb-row">
-                <ul class="list-inline">
-                    <li><a href="{{ route('homePage') }}">@lang('site.home') </a></li>
-                    <li>  @lang('site.media_center')</li>
-                </ul>
+        <div class="row my-5">
+            <div class="col-md-12 align-self-center text-center">
+                <h1 class="text-9 text-color-light custom-secondary-font font-weight-bold mb-1">   خدماتنا</h1>
+                <p class="text-color-light custom-secondary-font text-uppercase mb-0">  بعض خدماتنا</p>
             </div>
-            <!-- Breadcrumb row END -->
         </div>
     </div>
-</div>
+</section>
 
+<section class="section section-no-border bg-color-light m-0">
+    <div class="container">
+        <div class="row justify-content-center">
+            @foreach ($CompanyServices as $CompanyService)
+            <div class="col-lg-4 mb-4">
+                <article class="custom-post-blog">
+                    <span class="thumb-info custom-thumb-info-2">
+                        <span class="thumb-info-wrapper">
+                            <a href="demo-church-blog-detail.html">
+                                <img src="{{ asset('images/CompanyService/'.$CompanyService->image )}}" style="object-fit:fill; height: 250px " alt class="img-fluid" />
+                            </a>
+                        </span>
+                        <span class="thumb-info-caption custom-box-shadow">
+                            <span class="thumb-info-caption-text">
+                                <h4 class="font-weight-bold mb-4">
+                                    <span class="text-decoration-none custom-secondary-font text-color-dark">
+                                        {{ $CompanyService->ar_name }}
+                                    </span>
+                                </h4>
+                                <p>{!! $CompanyService->ar_details !!}</p>
+                            </span>
+                        </span>
+                    </span>
+                </article>
+            </div>
+            @endforeach
 
-	<!-- breadcrumb-section -->
-	{{-- <div class="breadcrumb-section breadcrumb-bg">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 offset-lg-2 text-center">
-					<div class="breadcrumb-text">
-						<p>Organic Information</p>
-						<h1>News Article</h1>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> --}}
-	<!-- end breadcrumb section -->
-
-	<!-- latest news -->
-	<div class="latest-news mt-150 mb-150 mt-5">
-		<div class="container">
-			<div class="row">
-                @foreach ($News as $new )
-
-
-				<div class="col-lg-4 col-md-6">
-					<div class="single-latest-news">
-
-                        <a href="{{ route('single.news',$new->id) }}">
-
-
-                            <img src="{{ asset('images/Blog/'.$new->image) }}" alt="" srcset="" style="width: 100%;
-                            height: 250px;
-                            object-fit: contain;
-                            border: 1px solid;">
-                        </a>
-                        if($new->video){
-
-                            <video id="video" class="slide__img"  style="width: 100%;
-                            height: 250px;" src="{{ asset("$new->video") }}"
-                                autoplay loop playsinline muted>
-                            </video>
-
-                        }
-                        {{--  @endif  --}}
-
-                            {{--  <div class="slide__img" style="background-image: url(images/Slider/{{ $slider->image }});">
-                                <div class="overlay">
-                                </div>
-                            </div>
-                            <div class="overlay">
-                            </div>  --}}
-						<div class="news-text-box p-0">
-							<h3 class="mb-1 mt-3"><a href="{{ route('single.news',$new->id) }}">{{ $new[$lang.'_title'] }}</a></h3>
-
-							<p class="excerpt mb-0">{{ $new[$lang.'_description'] }}</p>
-							<a href="{{ route('single.news',$new->id) }}" class="read-more-btn">@lang('site.read_more') <i class="fa fa-angle-right"></i></a>
-						</div>
-					</div>
-				</div>
-  @endforeach
-			</div>
-
-		</div>
-	</div>
-	<!-- end latest news -->
-
-
-
+        </div>
+    </div>
+</section>
 @endsection
