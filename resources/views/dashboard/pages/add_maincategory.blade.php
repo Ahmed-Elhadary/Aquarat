@@ -37,7 +37,7 @@
                     enctype="multipart/form-data">
                     @csrf
                     <div class="form-row ">
-                        <div class="form-group col-12">
+                        {{--  <div class="form-group col-12">
                             <label for="category_name"> Company *</label>
                             <select id='company_selected' name="company_id" class="form-control "
                                 required>
@@ -60,7 +60,7 @@
                         <div class="col-md-12 mb-3">
                             <label>English Name</label>
                             <input type="text" class="form-control" name="en_name" placeholder="English name">
-                        </div>
+                        </div>  --}}
                         <div class="col-md-12 mb-3">
                             <label>Arabic Name</label>
                             <input type="text" class="form-control" name="ar_name" placeholder="Arabic name" required>

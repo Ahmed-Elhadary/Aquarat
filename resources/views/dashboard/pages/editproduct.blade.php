@@ -33,7 +33,7 @@
                 <form class="needs-validation " novalidate action="{{route('products.update',$products->id)}}" method="post"  enctype="multipart/form-data">
                     @csrf
                     <div class="form-row ">
-                        {{--  <div class="form-group col-12">
+                        <div class="form-group col-12">
                             <label for="category_name">Main Category</label>
                             <select id='product_main_category_selected' name="main_category_id" class="form-control " required>
                                    @foreach($mainCategories as $mainCategory)
@@ -41,7 +41,7 @@
                                             {{ $products->main_category_id == $mainCategory->id ? 'selected' : '' }}>{{$mainCategory->ar_name}}</option>
                                     @endforeach
                                 </select>
-                          </div>  --}}
+                          </div>
 
                           <div class="col-md-12 mb-3">
                             <label for="validationCustom02">Arabic Name</label>

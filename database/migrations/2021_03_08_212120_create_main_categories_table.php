@@ -15,12 +15,12 @@ class CreateMainCategoriesTable extends Migration
     {
         Schema::create('main_categories', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('parent_id')->nullable()->unsigned();
-            $table->foreign('parent_id')->references('id')->on('main_categories');
-            $table->bigInteger('company_id')->unsigned();
-            $table->foreign('company_id')->references('id')->on('companies');
+            // $table->bigInteger('parent_id')->nullable()->unsigned();
+            // $table->foreign('parent_id')->references('id')->on('main_categories');
+            // $table->bigInteger('company_id')->unsigned();
+            // $table->foreign('company_id')->references('id')->on('companies');
             $table->string('ar_name');
-            $table->string('en_name')->nullable();
+            // $table->string('en_name')->nullable();
             $table->text('image');
             $table->timestamps();
         });

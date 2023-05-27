@@ -48,12 +48,8 @@ class ClientReviewController extends Controller
         }
 
         ClientReview::create([
-            'en_message'=>$request->en_message,
             'ar_message'=>$request->ar_message,
             'ar_name'=>$request->ar_name,
-            'en_name'=>$request->en_name,
-            'en_job'=>$request->en_job,
-            'ar_job'=>$request->ar_job,
             'image' => $image
         ]);
 
@@ -106,11 +102,8 @@ class ClientReviewController extends Controller
         }
 
         $reviews->update([
-            'en_message'=>$request->en_message,
             'ar_message'=>$request->ar_message,
             'ar_name'=>$request->ar_name,
-            'en_name'=>$request->en_name,
-            'en_job'=>$request->en_job,
             'ar_job'=>$request->ar_job
         ]);
         return redirect()->route('clientreview.index');

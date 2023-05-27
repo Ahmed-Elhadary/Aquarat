@@ -51,11 +51,9 @@ class ProductController extends Controller
 
 
         Product::create([
-            // 'main_category_id'=>$request->main_category_id,
+            'main_category_id'=>$request->main_category_id,
             'ar_name'=>$request->ar_name,
-            'en_name'=>$request->en_name,
             'ar_details'=>$request->ar_details,
-            'en_details'=>$request->en_details,
             'image' => $image
         ]);
 
@@ -82,8 +80,8 @@ class ProductController extends Controller
     public function edit($id)
     {
         $products = Product::find($id);
-        // $mainCategories = MainCategory::all();
-        return view('dashboard.pages.editproduct')->with('products',$products);
+        $mainCategories = MainCategory::all();
+        return view('dashboard.pages.editproduct')->with('products',$products)->with('mainCategories',$mainCategories);
 
     }
 
@@ -110,11 +108,9 @@ class ProductController extends Controller
         }
 
         $maincat->update([
-            // 'main_category_id'=>$request->main_category_id,
+            'main_category_id'=>$request->main_category_id,
             'ar_name' => $request->ar_name,
-            'en_name' => $request->en_name,
             'ar_details' => $request->ar_details,
-            'en_details' => $request->en_details,
         ]);
         return redirect()->route('products.index');
     }

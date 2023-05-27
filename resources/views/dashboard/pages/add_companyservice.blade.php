@@ -39,10 +39,10 @@
                                 Looks good!
                             </div>
                        </div>
-                        <div class="col-md-12 mb-3">
+                        {{--  <div class="col-md-12 mb-3">
                             <label for="validationCustom02">English Name</label>
                             <input type="text" class="form-control" name="en_name" placeholder="English name"  >
-                        </div>
+                        </div>  --}}
 
                         <div class="col-md-12 mb-3">
                             <label for="validationCustom02">Arabic Details</label>
@@ -53,29 +53,26 @@
                             </div>
                         </div>
                         <div class="col-md-12 mb-3">
+                            <label >Image *</label>
+                            <div class="input-group mb-3">
+                                <div class="custom-file">
+                                  <input type="file" class="custom-file-input" name="image" id="inputGroupFile02" required>
+                                  <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+                                </div>
+                              </div>
+                        </div>
+                        {{--  <div class="col-md-12 mb-3">
                             <label for="validationCustom02">English Details</label>
                             <textarea type="text" class="form-control" name="en_details" maxlength="65"  placeholder="English Details"  ></textarea>
                             maximum length of 65 characters
-                        </div>
+                        </div>  --}}
 
 
-                        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css')}}">
-                        <link href="{{ asset('dashboard/font-picker/css/icon-picker.min.css') }}" media="all" rel="stylesheet" type="text/css" />
+                        {{--  <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css')}}">  --}}
+                        {{--  <link href="{{ asset('dashboard/font-picker/css/icon-picker.min.css') }}" media="all" rel="stylesheet" type="text/css" />  --}}
                         <script src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
                         <script src=" {{ asset('dashboard/font-picker/js/iconPicker.min.js') }}"></script>
-                        <script type="text/javascript">
-                            $(function () {
-                                $(".icon-picker").iconPicker();
-                            });
-                        </script>
 
-                        <div class="col-md-12 mb-3">
-                            <label for="validationCustom02">Choose Icon</label>
-                            <input type="text" name="icon" class="icon-picker readonly-icon"  required/>
-                            <div class="valid-feedback">
-                                Looks good!
-                            </div>
-                        </div>
                     </div>
                     <button class="btn btn-warning" type="submit">Add New</button>
                 </form>
@@ -104,13 +101,7 @@
 @endsection
 @push('custom-scripts')
 
-<script>
-      $(".readonly-icon").on('keydown paste focus mousedown', function(e){
-        if(e.keyCode != 9) // ignore tab
-            e.preventDefault();
-    });
 
-</script>
 
 @endpush
 

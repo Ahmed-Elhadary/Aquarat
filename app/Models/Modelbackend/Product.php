@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
-    protected $fillable=["ar_name","en_name","ar_details","en_details","image"];
+    protected $fillable=["main_category_id","ar_name","ar_details","image"];
 
-    // public function maincategory()
-    // {
-    //     return $this->belongsTo("\App\Models\Modelbackend\MainCategory");
-    // }
+    public function maincategory()
+    {
+        return $this->belongsTo("\App\Models\Modelbackend\MainCategory");
+    }
 
 }

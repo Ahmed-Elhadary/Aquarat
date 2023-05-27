@@ -47,31 +47,12 @@ class BlogController extends Controller
             $image->move(public_path('/images/Blog/'), $image_name);
             $image=$image_name;
         }
-    if ($request->hasFile('video'))
-    {
 
-        $this->validate($request, [
-            'video' => 'file|mimetypes:video/mp4',
-        ]);
-      $path = $request->file('video')->store('videos', ['disk' => 'my_files']);
-      blog::create([
-        'ar_description'=>$request->ar_description,
-        'ar_title'=>$request->ar_title,
-         'en_title'=>$request->en_title,
-        'en_description'=>$request->en_description,
-        'video'=>$path,
-        'type'=>$request->type
-    ]);
-    }else{
         blog::create([
             'ar_description'=>$request->ar_description,
-            'en_description'=>$request->en_description,
             'ar_title'=>$request->ar_title,
-            'en_title'=>$request->en_title,
-            'image'=>$image,
-            'type'=>$request->type
         ]);
-    }
+
         return redirect()->route('blogs.index');
     }
 
@@ -118,30 +99,11 @@ class BlogController extends Controller
                 ]);
             }
         }
-    if ($request->hasFile('video'))
-    {
-        $this->validate($request, [
-            'video' => 'file|mimetypes:video/mp4',
-        ]);
-      $path = $request->file('video')->store('videos', ['disk' => 'my_files']);
-      $blog->update([
-        'ar_description'=>$request->ar_description,
-        'en_description'=>$request->en_description,
-        'ar_title'=>$request->ar_title,
-        'en_title'=>$request->en_title,
-        'video'=>$path,
-        'type'=>$request->type
-    ]);
-    }else{
 
         $blog->update([
             'ar_description' => $request->ar_description,
-            'en_description' => $request->en_description,
             'ar_title'=>$request->ar_title,
-            'en_title'=>$request->en_title,
-            'type'=>$request->type
         ]);
-    }
         return redirect()->route('blogs.index');
     }
 

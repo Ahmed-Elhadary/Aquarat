@@ -21,10 +21,8 @@
                 <thead>
                   <tr>
                     <th>Arabic Name</th>
-                    <th class="hiddenCols">English Name</th>
                     <th>Arabic Details</th>
-                    <th class="hiddenCols">English Details</th>
-                    <th>Icon</th>
+                    <th>Image</th>
                     <th width="120px">Action</th>
 
                   </tr>
@@ -33,10 +31,10 @@
                     @foreach($company_services as $service)
                     <tr>
                         <td>{{ $service->ar_name }}</td>
-                        <td>{{ $service->en_name }}</td>
                         <td>{{ $service->ar_details }}</td>
-                        <td>{{ $service->en_details }}</td>
-                        <td><i class="{{ $service->icon }}"></i></td>
+                        <td>
+                            <img src={{ asset('images/CompanyService/'. $service->image)}} width="70px" height="70px">
+                        </td>
                        <td>
                         <form action="{{route('companyservice.destroy',$service)}}" method="post" >
                             @csrf

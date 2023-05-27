@@ -33,36 +33,16 @@
                 <form class="needs-validation " novalidate action="{{route('clientreview.update',$reviews->id)}}" method="post"  enctype="multipart/form-data">
                     @csrf
                     <div class="form-row ">
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-12 mb-3">
                             <label >Arabic  Name </label>
                             <input type="text" class="form-control"  value="{{ $reviews->ar_name }}" name="ar_name" placeholder="Arabic Name"  required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
-                        <div class="col-md-6 mb-3">
-                            <label >English Name </label>
-                            <input type="text" class="form-control"  value="{{ $reviews->en_name }}" name="en_name" placeholder="English Name"  >
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label >Arabic Job </label>
-                            <input type="text" class="form-control" name="ar_job" value="{{ $reviews->ar_job }}" placeholder="Arabic Job "  required >
-                            <div class="valid-feedback">
-                                Looks good!
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label >English Job </label>
-                            <input type="text" class="form-control" name="en_job" value="{{ $reviews->en_job }}" placeholder="English Job"  >
-                        </div>
                         <div class="col-md-12 mb-3">
                             <label > Arabic Message</label>
                             <textarea type="text" class="form-control" name="ar_message" maxlength="165" placeholder="Arabic Message"  required>{{ $reviews->ar_message }}</textarea>
-                            maximum length of 165 characters
-                        </div>
-                        <div class="col-md-12 mb-3">
-                            <label > English Message</label>
-                            <textarea type="text" class="form-control" name="en_message" maxlength="165" placeholder="English Message"  >{{ $reviews->en_message }}</textarea>
                             maximum length of 165 characters
                         </div>
                         <div class="col-md-12 mb-3">

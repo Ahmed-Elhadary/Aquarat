@@ -33,7 +33,7 @@
                 <form class="needs-validation " novalidate action="{{route('maincategory.update',$maincategory->id)}}" method="post"  enctype="multipart/form-data">
                     @csrf
                     <div class="form-row ">
-                        <div class="form-group col-12">
+                        {{--  <div class="form-group col-12">
                             <label for="category_name"> Company *</label>
                             <select id='company_selected' name="company_id" class="form-control "
                                 required>
@@ -56,10 +56,10 @@
                         <div class="col-md-12 mb-3">
                             <label >English Name</label>
                             <input type="text" class="form-control" name="en_name" placeholder="English name" value="{{ $category->en_name }}" >
-                        </div>
+                        </div>  --}}
                         <div class="col-md-12 mb-3">
                             <label >Arabic Name</label>
-                            <input type="text" class="form-control" name="ar_name"  placeholder="Arabic name" value="{{ $category->ar_name }}" required>
+                            <input type="text" class="form-control" name="ar_name"  placeholder="Arabic name" value="{{ $maincategory->ar_name }}" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
@@ -67,7 +67,7 @@
                         <div class="col-md-12 mb-3">
                             <label for="validationImage">Image</label>
                             <div class="input-group">
-                                <input type="file" name="image" class="form-control" id="validationImage" placeholder="Image" aria-describedby="inputGroupPrepend" value="{{ $category->image }}" >
+                                <input type="file" name="image" class="form-control" id="validationImage" placeholder="Image" aria-describedby="inputGroupPrepend" value="{{ $maincategory->image }}" >
 
                             </div>
                         </div>

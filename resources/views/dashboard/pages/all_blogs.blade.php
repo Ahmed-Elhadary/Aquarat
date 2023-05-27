@@ -16,7 +16,7 @@
 
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">All blogs</h3>
+              <h3 class="card-title">All Offers</h3>
             </div>
             <!-- /.card-header -->
             <br>
@@ -28,9 +28,7 @@
                 <thead>
                   <tr>
                     <th>Arabic Title</th>
-                    <th >English Title</th>
                     <th>Arabic Description</th>
-                    <th >English Description</th>
                     <th>image</th>
                     <th width="120px">Action</th>
 
@@ -40,9 +38,7 @@
                     @foreach($blogs as $blog)
                     <tr>
                         <td>{{ $blog->ar_title }}</td>
-                        <td>{{ $blog->en_title }}</td>
-                        <td>{{ $blog->ar_description }}</td>
-                        <td>{{ $blog->en_description }}</td>
+                        <td>{!! $blog->ar_description !!}</td>
                      <td>  <img src="{{ asset('images/Blog/'.$blog->image)}}" width="70px" height="70px"></td>
                        <td>
                         <form action="{{route('blogs.destroy',$blog)}}" method="post" >

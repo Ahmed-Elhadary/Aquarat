@@ -22,11 +22,11 @@
                 <thead>
                   <tr>
                     <th>Arabic Name</th>
-                    <th class="hiddenCols">English Name</th>
-                    <th>Arabic Job</th>
-                    <th class="hiddenCols">English Job</th>
+                    {{--  <th class="hiddenCols">English Name</th>  --}}
+                    {{--  <th>Arabic Job</th>  --}}
+                    {{--  <th class="hiddenCols">English Job</th>  --}}
                     <th>Arabic Message</th>
-                    <th class="hiddenCols">English Message</th>
+                    {{--  <th class="hiddenCols">English Message</th>  --}}
                     <th>Client Image</th>
                     <th width="120px">Action</th>
                   </tr>
@@ -35,11 +35,11 @@
                     @foreach($reviews as $review)
                         <tr>
                             <td>{{ $review->ar_name }}</td>
-                            <td>{{ $review->en_name }}</td>
-                            <td>{{ $review->ar_job }}</td>
-                            <td>{{ $review->en_job }}</td>
+                            {{--  <td>{{ $review->en_name }}</td>  --}}
+                            {{--  <td>{{ $review->ar_job }}</td>  --}}
+                            {{--  <td>{{ $review->en_job }}</td>  --}}
                             <td>{{ $review->ar_message }}</td>
-                            <td>{{ $review->en_message }}</td>
+                            {{--  <td>{{ $review->en_message }}</td>  --}}
                             <td><img src="{{asset('images/Reviews/'.$review->image)  }}" alt="" width="70px" > </td>
                             <td>
                                 <form action="{{route('clientreview.destroy',$review)}}" method="post" >

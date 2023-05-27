@@ -7,13 +7,13 @@
         <div class="row">
             <div class="col-6">
                 <div class="page-title-heading">
-                    <div>Add blog
+                    <div>Add offer
                     </div>
                 </div>
             </div>
             <div class="col-6 ">
                 <div class="page-links-heading">
-                      Add blog / <a href="{{ route('blogs.index') }}">Blogs</a> /
+                      Add Offer / <a href="{{ route('blogs.index') }}">Offers</a> /
                        <a href="{{ route('dashboard.index') }}">Home</a>
                 </div>
             </div>
@@ -32,63 +32,30 @@
                 </div>
                 <form class="needs-validation " novalidate action="{{route('blogs.update',$blog->id)}}" method="post"  enctype="multipart/form-data">
                     @csrf
-                    <div class="form-row ">
-                        <div class="form-group mt-3">
-                        <label for="slider" class="ml-2 mr-2">video</label>
-                        <input type="radio" id="video" name="type" value="0" >
-                        <label for="slider" class="ml-2 mr-2">image</label>
-                        <input type="radio" id="image" name="type" value="1" checked>
-                    </div>
                         <div class="col-md-12 mb-3">
-                            <label for="validationCustom02">Arabic Blog Title</label>
+                            <label for="validationCustom02">Title</label>
                             <input type="text" class="form-control" name="ar_title" value="{{ $blog->ar_title }}" placeholder="Arabic Title"  required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
                         <div class="col-md-12 mb-3">
-                            <label for="validationCustom02">English Title</label>
-                            <input type="text" class="form-control" name="en_title" value="{{ $blog->en_title }}" placeholder="English Title"  >
-                        </div>
-
-
-                        <div class="col-md-12 mb-3">
                             <label for="validationCustom02">Arabic Description</label>
-                            <textarea type="text" class="form-control" name="ar_description" maxlength="180"  placeholder="Arabic Description"  required>{{ $blog->ar_description }}</textarea>
+                            <textarea type="text" class="form-control" id="ar_description" name="ar_description" maxlength="180"  placeholder="Arabic Description"  required>{{ $blog->ar_description }}</textarea>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                             maximum length of 180 characters
                         </div>
                         <div class="col-md-12 mb-3">
-                            <label for="validationCustom02">English Description</label>
-                            <textarea type="text" class="form-control" name="en_description"  maxlength="180"  placeholder="English Description"  >{{ $blog->en_description }}</textarea>
-                            maximum length of 180 characters
-
-                        </div>
-
-                        <div class="col-md-12 mb-3 image">
-                            <label>Image *</label>
-                            <div class="input-group mb-3">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" name="image">
-                                    <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
-                                </div>
+                            <label for="validationImage">Image</label>
+                            <div class="input-group">
+                                <input type="file" name="image" class="form-control" id="validationImage" placeholder="Image" aria-describedby="inputGroupPrepend">
                             </div>
                         </div>
-                        <div class="col-md-12 mb-3 video d-none">
-                            <label>Video *</label>
-                            <div class="input-group mb-3">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" name="video">
-                                    <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
-                    @method('PUT')
                     <button class="btn btn-warning" type="submit">Upadte</button>
+                    @method('PUT')
                 </form>
             </div>
         </div>
@@ -96,27 +63,13 @@
     </div>
 @endsection
 @push('custom-scripts')
-
+<script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
 <script>
-      $(".readonly-icon").on('keydown paste focus mousedown', function(e){
-        if(e.keyCode != 9) // ignore tab
-            e.preventDefault();
-    });
-    $('input[name="type"]').on('click', function() {
-        var type = $("input[name='type']:checked").val();
-        console.log(type);
-        if (type != '') {
-            if (type == 0) {
-                $('.video').removeClass('d-none');
-                $('.image').addClass('d-none');
+    ClassicEditor.create( document.querySelector( '#ar_description' ) )
+        .catch( error => {
+            console.error( error );
+        } );
 
-            } else if (type == 1) {
-                $('.image').removeClass('d-none');
-                $('.video').addClass('d-none');
-            }
 
-        }
-    });
 </script>
-
 @endpush

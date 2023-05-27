@@ -15,11 +15,9 @@ class CreateCompanyServicesTable extends Migration
     {
         Schema::create('company_services', function (Blueprint $table) {
             $table->id();
-            $table->string('icon');
+            $table->string('image');
             $table->string('ar_name');
-            $table->string('en_name')->nullable();
             $table->string('ar_details');
-            $table->string('en_details')->nullable();
             $table->timestamps();
         });
     }

@@ -43,7 +43,7 @@
                 </li>
                 <li class="app-sidebar__heading">Components</li>
 
-                {{--  <li class="{{ (request()->is('*dashboard/maincategory*') ||
+                <li class="{{ (request()->is('*dashboard/maincategory*') ||
                     request()->is('*dashboard/products*')) ? 'mm-active' : '' }}">
                     <a href="">
                         <i class="metismenu-icon pe-7s-box1"></i>
@@ -64,13 +64,13 @@
                             </a>
                         </li>
                     </ul>
-                </li>  --}}
-                <li>
+                </li>
+                {{--  <li>
                     <a href="{{ route('products.index') }}" class=" {{ (request()->is('*dashboard/products*')) ? 'mm-active' : '' }}">
                         <i class="metismenu-icon pe-7s-display2"></i>
                         Our business
                     </a>
-                </li>
+                </li>  --}}
                 {{--  <li  class="{{ (request()->is('*dashboard/positions*') ||
                     request()->is('*dashboard/people*')) ? 'mm-active' : '' }}">
                     <a href="#">
@@ -120,12 +120,12 @@
                                 </i>About Company
                             </a>
                         </li>
-                        {{--  <li>
+                        <li>
                             <a class="{{ (request()->is('*dashboard/companyservice*')) ? 'mm-active' : '' }}" href="{{ route('companyservice.index') }}">
                                 <i class="metismenu-icon   pe-7s-tools">
                                 </i> Company Services
                             </a>
-                        </li>  --}}
+                        </li>
                         {{--  <li>
                             <a class="{{ (request()->is('*dashboard/achievements*')) ? 'mm-active' : '' }}" href="{{ route('achievements.index') }}">
                                 <i class="metismenu-icon pe-7s-pen"></i>
@@ -155,12 +155,12 @@
                     </a>
                 </li>  --}}
 
-                {{--  <li>
+                <li>
                     <a class="{{ (request()->is('*dashboard/blogs*')) ? 'mm-active' : '' }}"  href="{{ route('blogs.index') }}">
                         <i class="metismenu-icon pe-7s-help1"></i>
-                       Blogs
+                       Offers
                     </a>
-                </li>  --}}
+                </li>
                 {{--  <li>
                     <a class="{{ (request()->is('*dashboard/services*')) ? 'mm-active' : '' }}" href="{{ route('services.index') }}">
                         <i class="metismenu-icon   pe-7s-tools"></i>
@@ -180,7 +180,12 @@
                         Slider
                     </a>
                 </li>
-
+                <li>
+                    <a class="{{ (request()->is('*dashboard/clientreview*')) ? 'mm-active' : '' }}" href="{{ route('clientreview.index') }}">
+                        <i class="metismenu-icon  pe-7s-comment"></i>
+                        Client Reviews
+                    </a>
+                </li>
 
                 <li class="app-sidebar__heading">Setting</li>
                 <li>

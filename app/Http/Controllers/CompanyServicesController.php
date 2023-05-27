@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Modelbackend\CompanyServices;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class CompanyServicesController extends Controller
@@ -37,8 +38,20 @@ class CompanyServicesController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->all();
-        CompanyServices::create($input);
+        $image= null;
+        if($request->hasFile('image')) {
+            $image =  $request->image;
+            $timestamp = str_replace([' ', ':'], '-', Carbon::now()->toDateTimeString());
+            $image_name = $timestamp . $image-> getClientOriginalName();
+            $image->move(public_path('/images/CompanyService/'), $image_name);
+            $image=$image_name;
+        }
+
+        CompanyServices::create([
+            'ar_name'=>$request->ar_name,
+            'ar_details'=>$request->ar_details,
+            'image'=>$image,
+        ]);
         return redirect()->route('companyservice.index');
     }
 
@@ -75,12 +88,19 @@ class CompanyServicesController extends Controller
     public function update(Request $request,$id)
     {
         $companyservice = CompanyServices::findOrFail($id);
+        if($request->has('image')) {
+            if ($request->hasFile('image')) {
+                $timestamp = str_replace([' ', ':'], '-', Carbon::now()->toDateTimeString());
+                $p_image= $timestamp . '_' . $request->image->getClientOriginalName();
+                $request->image->move(public_path('/Images/CompanyService/'), $p_image);
+                $companyservice->update([
+                    'image' => $p_image
+                ]);
+            }
+        }
         $companyservice->update([
-            'icon' => $request->icon,
             'ar_name' => $request->ar_name,
-            'en_name' => $request->en_name,
             'ar_details' => $request->ar_details,
-            'en_details' => $request->en_details
         ]);
         return redirect()->route('companyservice.index');
     }

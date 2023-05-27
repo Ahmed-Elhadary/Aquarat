@@ -26,9 +26,8 @@ class MainCategoryController extends Controller
      */
     public function create()
     {
-        $categories = MainCategory::where('parent_id',null)->get();
-        $companies = Company::all();
-        return view('dashboard.pages.add_maincategory',compact('categories','companies'));
+        $categories = MainCategory::all();
+        return view('dashboard.pages.add_maincategory',compact('categories'));
 
     }
 
@@ -49,10 +48,7 @@ class MainCategoryController extends Controller
             $image=$image_name;
         }
         $mCat = MainCategory::create([
-            'company_id'=>$request->company_id,
-            'parent_id'=>$request->main_category_id,
             'ar_name'=>$request->ar_name,
-            'en_name'=>$request->en_name,
             'image' => $image
         ]);
         return redirect()->route('maincategory.index');
@@ -78,10 +74,8 @@ class MainCategoryController extends Controller
     public function edit($id)
     {
         $maincategory = MainCategory::find($id);
-        $categories = MainCategory::where('parent_id',null)->get();
-        $companies = Company::all();
         // dd($categories);
-        return view('dashboard.pages.edit_maincategory',compact('categories','companies','maincategory'));
+        return view('dashboard.pages.edit_maincategory',compact('maincategory'));
 
     }
 
@@ -108,10 +102,7 @@ class MainCategoryController extends Controller
         }
 
         $maincat->update([
-            'company_id'=>$request->company_id,
-            'parent_id'=>$request->main_category_id,
             'ar_name' => $request->ar_name,
-            'en_name' => $request->en_name
         ]);
         // Toastr::success(trans("site.product_success_edit"),trans("site.success"));
         return redirect()->route('maincategory.index');

@@ -22,7 +22,7 @@
                 <thead>
                   <tr>
                     <th>Arabic Name</th>
-                    <th>English Name</th>
+                    {{--  <th>English Name</th>  --}}
                     <th>Image</th>
                     <th>Action</th>
                   </tr>
@@ -31,7 +31,7 @@
                     @foreach($categories as $category)
                     <tr>
                         <td>{{ $category->ar_name }}</td>
-                        <td>{{ $category->en_name }}</td>
+                        {{--  <td>{{ $category->en_name }}</td>  --}}
                         <td>
                             <img src="{{ asset('images/Main_Category/'.$category->image)}}" width="70px" height="70px">
                         </td>

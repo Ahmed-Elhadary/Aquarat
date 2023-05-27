@@ -40,7 +40,7 @@
                     <div class="form-row ">
 
 
-                        {{--  <div class="form-group col-12">
+                        <div class="form-group col-12">
                             <label for="category_name"> Category *</label>
                             <select id='product_main_category_selected' name="main_category_id" class="form-control " required>
                                     <option></option>
@@ -48,7 +48,7 @@
                                         <option value='{{$mainCategory->id}}' >{{$mainCategory->ar_name}}</option>
                                     @endforeach
                                 </select>
-                          </div>  --}}
+                          </div>
 
 
                         {{--  <div class="col-md-6 mb-3">
