@@ -21,7 +21,9 @@
             <!-- /.card-header -->
             <br>
             <div class="col-sm-3">
-            <a class="btn btn-warning btn-add-items " href="{{ route('blogs.create') }}">Add New</a>
+                @if(count($blogs)<=1)
+                <a class="btn btn-warning btn-add-items " href="{{ route('blogs.create') }}">Add New</a>
+                @endif
             </div>
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">

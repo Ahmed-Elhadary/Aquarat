@@ -15,7 +15,7 @@ class AboutCompanyController extends Controller
      */
     public function index()
     {
-
+// dd("D");
 
         return view('dashboard.pages.all_aboutcompany')->with('about_company',AboutCompany::all());
     }

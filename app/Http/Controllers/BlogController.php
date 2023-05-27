@@ -49,6 +49,7 @@ class BlogController extends Controller
         }
 
         blog::create([
+            'image'=>$image_name,
             'ar_description'=>$request->ar_description,
             'ar_title'=>$request->ar_title,
         ]);

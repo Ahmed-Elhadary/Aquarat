@@ -7,13 +7,13 @@
         <div class="row">
             <div class="col-6">
                 <div class="page-title-heading">
-                    <div>Add blog
+                    <div>Add OFFER
                     </div>
                 </div>
             </div>
             <div class="col-6 ">
                 <div class="page-links-heading">
-                      Add blog / <a href="{{ route('blogs.index') }}">Blogs</a> /
+                      Add OFFER / <a href="{{ route('blogs.index') }}">Offers</a> /
                        <a href="{{ route('dashboard.index') }}">Home</a>
                 </div>
             </div>
@@ -33,24 +33,14 @@
                 <form class="needs-validation " novalidate action="{{route('blogs.store')}}" method="post"  enctype="multipart/form-data">
                     @csrf
                     <div class="form-row ">
-                        <div class="form-group mt-3">
-                            <label for="slider" class="ml-2 mr-2">video</label>
-                            <input type="radio" id="video" name="type" value="0" >
-                            <label for="slider" class="ml-2 mr-2">image</label>
-                            <input type="radio" id="image" name="type" value="1" checked>
-                        </div>
+
                         <div class="col-md-12 mb-3">
-                            <label for="validationCustom02">Arabic Blog Title</label>
+                            <label for="validationCustom02">Title</label>
                             <input type="text" class="form-control" name="ar_title" placeholder="Arabic Title"  required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
-                        <div class="col-md-12 mb-3">
-                            <label for="validationCustom02">English Title</label>
-                            <input type="text" class="form-control" name="en_title" placeholder="English Title"  >
-                        </div>
-
 
                         <div class="col-md-12 mb-3">
                             <label for="validationCustom02">Arabic Description</label>
@@ -59,12 +49,6 @@
                                 Looks good!
                             </div>
                             maximum length of 180 characters
-                        </div>
-                        <div class="col-md-12 mb-3">
-                            <label for="validationCustom02">English Description</label>
-                            <textarea type="text" class="form-control" name="en_description" maxlength="180"  placeholder="English Description"  ></textarea>
-                            maximum length of 180 characters
-
                         </div>
                             <div class="col-md-12 mb-3 image">
                                 <label>Image *</label>
@@ -75,16 +59,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-12 mb-3 video d-none">
-                                <label>Video *</label>
-                                <div class="input-group mb-3">
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" name="video">
-                                        <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
-                                    </div>
-                                </div>
-                            </div>
-
                     <button class="btn btn-warning" type="submit">Add New</button>
                 </form>
             </div>

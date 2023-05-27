@@ -35,6 +35,11 @@
                                             </a>
                                         </li>
                                         <li>
+                                            <a class="nav-link  @if (request()->is('ourservices')) active @endif" href="{{ route('ourservices') }}">
+                                                 خدماتنا
+                                            </a>
+                                        </li>
+                                        <li>
                                             <a class="nav-link  @if (request()->is('reviews')) active @endif" href="{{ route('reviews') }}">
                                                  شهاداتنا
                                             </a>
