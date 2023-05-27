@@ -34,14 +34,11 @@ lang="en" dir="ltr" @endif>
     <link rel="stylesheet" href="{{ asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendor/owl.carousel/assets/owl.theme.default.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendor/magnific-popup/magnific-popup.min.css') }}">
-	{{--  <link rel="stylesheet" href="{{ asset('assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}">  --}}
-		{{--  <link rel="stylesheet" href="{{ asset('assets/vendor/owl.carousel/assets/owl.theme.default.css') }}">  --}}
     <link rel="stylesheet" href="{{ asset('assets/master/rtl/css/rtl-theme.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/master/rtl/css/rtl-theme-elements.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/master/rtl/css/rtl-theme-blog.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/master/rtl/css/rtl-theme-shop.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/master/rtl/css/demos/rtl-demo-church.css') }}">
-
 
     <link id="skinCSS" rel="stylesheet" href="{{ asset('assets/css/skin-church.css') }}">
 

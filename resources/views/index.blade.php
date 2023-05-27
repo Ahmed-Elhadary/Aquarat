@@ -47,34 +47,39 @@
 
 
 
-    <section class="section section-tertiary section-no-border m-0">
+    <section class="section section-no-border m-0 bg-color-grey ">
         <div class="container">
+            @if ($blog)
+                <div class="row">
+                    <div class="col">
+                        <article class="custom-post-event bg-color-light p-4">
+                            <div class="post-event-date  text-center">
 
-            <div class="row">
-                <div class="col">
-                    <article class="custom-post-event bg-color-light p-4">
-                        <div class="post-event-date  text-center">
-                            <img src="{{ asset('images/Blog/' . $blog->image) }}" alt class="img-fluid" style="height: 180px;
+                                <img src="{{ asset('images/Blog/' . $blog->image) }}" alt class="img-fluid"
+                                    style="max-height: 110px;
                             object-fit: cover;
-                            width: 190px;"/>
-                        </div>
-                        <div class="post-event-content  ps-2" style="margin-right:203px;">
-                            <h4 class="font-weight-bold text-color-dark">
-                                <span class="text-decoration-none custom-secondary-font text-color-dark">
-                                   {{ $blog->ar_title}}
-                                </span>
-                            </h4>
-                            <p>{!! $blog->ar_description !!}</p>
+                            width: 190px;" />
 
-                        </div>
-                    </article>
+                            </div>
+                            <div class="post-event-content  ps-2" style="margin-right:203px;">
+                                <h4 class="font-weight-bold text-color-dark">
+                                    <span class="text-decoration-none custom-secondary-font text-color-dark">
+                                        {{ $blog->ar_title }}
+                                    </span>
+                                </h4>
+                                <p>{!! $blog->ar_description !!}</p>
+
+                            </div>
+                        </article>
+                    </div>
                 </div>
-            </div>
+            @endif
         </div>
     </section>
 
     @foreach ($aboutCompany as $about)
-        <section class="section section-no-border custom-position-relative custom-section-padding-1 bg-color-light m-0" style="overflow: hidden !important">
+        <section class="section section-no-border custom-position-relative custom-section-padding-1 bg-color-light m-0"
+            style="overflow: hidden !important">
             {{--  <img class="custom-cloud left-pos d-none d-md-block appear-animation"
                 data-appear-animation="customFadeInLeftNoRotate" data-appear-animation-delay="0"
                 data-plugin-options="{'accY': -300}" src="{{ asset('images/About/' . $about->image) }}" alt />  --}}
@@ -109,15 +114,7 @@
             </div>
         </section>
     @endforeach
-    {{--  <section class="page-header page-header-modern bg-color-secondary  mb-0">
-    <div class="container">
-        <div class="row my-4">
-            <div class="col-md-12 align-self-center text-center">
-                <h1 class="text-9 text-color-light custom-secondary-font font-weight-bold my-4">مشاريعنا</h1>
-            </div>
-        </div>
-    </div>
-</section>  --}}
+
 
     <section class="section section-no-border bg-color-grey m-0">
         <h2 style="text-align: center;
@@ -143,18 +140,18 @@
                     <div class="col-lg-4">
                         <span class="thumb-info custom-thumb-info-4">
                             <a data-href="ajax/demo-church-gallery-ajax-on-page-1.html"
-                                class="text-decoration-none  text-color-dark" >
+                                class="text-decoration-none  text-color-dark">
                                 <span class="thumb-info-wrapper">
-                                    <img src="{{ asset('images/Products/' . $product->image) }}" alt class="img-fluid" style="height: 280px;
-                                    object-fit: cover;"/>
+                                    <img src="{{ asset('images/Products/' . $product->image) }}" alt class="img-fluid"
+                                        style="height: 280px;
+                                    object-fit: cover;" />
                                 </span>
                             </a>
                             <span class="thumb-info-caption custom-box-shadow">
                                 <span class="thumb-info-caption-text">
                                     <h2 class="font-weight-bold text-5 text-center">
                                         <a data-href="ajax/demo-church-gallery-ajax-on-page-1.html"
-                                            class="text-decoration-none  text-color-dark"
-                                            >
+                                            class="text-decoration-none  text-color-dark">
                                             {{ $product[$lang . '_name'] }}
                                         </a>
                                     </h2>
@@ -165,76 +162,47 @@
                 @endforeach
 
             </div>
-            <a href="{{ route('services') }}" class="btn btn-primary custom-btn-style-1 text-uppercase mt-4" style="    display: block;
+            <a href="{{ route('services') }}" class="btn btn-primary custom-btn-style-1 text-uppercase mt-4"
+                style="    display: block;
             width: 110px;
             margin: auto;">
                 المزيد</a>
         </div>
     </section>
 
+    <div id="examples" class="container  py-2">
+
+        <div class="row">
+            <h2 style="text-align: center;
+            font-weight: 500;margin: 30px 0px;">أعمالنا </h2>
+            <div class="col">
+
+                <div class="owl-carousel owl-theme stage-margin"
+                    data-plugin-options="{'items': 3, 'margin': 10, 'rtl':true, 'loop': true, 'nav': true, 'dots': false, 'stagePadding': 40}">
+
+                    @foreach ($reviews as $review)
+                        <div>
+                            <a href="{{ asset('Images/Reviews/'.$review->image) }}" target="_blank">
+                            <img alt="" class="img-fluid rounded" style=" height: 300px;
+                                object-fit: cover;"
+                                src="{{ asset('Images/Reviews/'.$review->image) }}">
+                            </a>
+                        </div>
+                    @endforeach
 
 
-	<div class="row">
-        <div class="col">
-            <hr class="solid my-5">
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col">
-            <h4>Show Navigation on Hover</h4>
-            <div class="owl-carousel owl-theme show-nav-hover" data-plugin-options="{'items': 6, 'margin': 10, 'loop': false, 'nav': true, 'dots': false}">
-                <div>
-                    <img alt="" class="img-fluid rounded" src="{{ asset('Images/1.jpeg') }}">
-                </div>
-                <div>
-                    <img alt="" class="img-fluid rounded" src="{{ asset('Images/About/2023-05-22-16-02-14_cat1.jpg') }}">
-                </div>
-                <div>
-                    <img alt="" class="img-fluid rounded" src="img/projects/project-1.jpg">
-                </div>
-                <div>
-                    <img alt="" class="img-fluid rounded" src="img/projects/project-2.jpg">
-                </div>
-                <div>
-                    <img alt="" class="img-fluid rounded" src="img/projects/project-3.jpg">
-                </div>
-                <div>
-                    <img alt="" class="img-fluid rounded" src="img/projects/project-4.jpg">
-                </div>
-                <div>
-                    <img alt="" class="img-fluid rounded" src="img/projects/project-3.jpg">
-                </div>
-                <div>
-                    <img alt="" class="img-fluid rounded" src="img/projects/project-4.jpg">
-                </div>
-                <div>
-                    <img alt="" class="img-fluid rounded" src="img/projects/project-5.jpg">
-                </div>
-                <div>
-                    <img alt="" class="img-fluid rounded" src="img/projects/project-6.jpg">
-                </div>
-                <div>
-                    <img alt="" class="img-fluid rounded" src="img/projects/project-7.jpg">
-                </div>
-                <div>
-                    <img alt="" class="img-fluid rounded" src="img/projects/project-1.jpg">
-                </div>
-                <div>
-                    <img alt="" class="img-fluid rounded" src="img/projects/project-2.jpg">
-                </div>
-                <div>
-                    <img alt="" class="img-fluid rounded" src="img/projects/project-3.jpg">
                 </div>
             </div>
+            <a href="{{ route('reviews') }}" class="btn btn-primary custom-btn-style-1 text-uppercase mt-4"
+            style="    display: block;
+        width: 110px;
+        margin: auto;margin-bottom:20px">
+            المزيد</a>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col">
-            <hr class="solid my-5">
-        </div>
-    </div
+
+
 @endsection
 
 @push('custom-scripts')
