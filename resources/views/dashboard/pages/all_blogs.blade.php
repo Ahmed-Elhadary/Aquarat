@@ -21,7 +21,7 @@
             <!-- /.card-header -->
             <br>
             <div class="col-sm-3">
-                @if(count($blogs)<=1)
+                @if(count($blogs)<1)
                 <a class="btn btn-warning btn-add-items " href="{{ route('blogs.create') }}">Add New</a>
                 @endif
             </div>

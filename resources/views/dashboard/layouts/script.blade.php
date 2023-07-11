@@ -11,7 +11,7 @@
 <script src="{{asset('dashboard/datatable/pdfmake/vfs_fonts.js') }}"></script>
 <script src="{{asset('dashboard/datatable/datatables-buttons/js/buttons.html5.min.js') }}"></script>
 <script src="{{asset('dashboard/datatable/datatables-buttons/js/buttons.print.min.js') }}"></script>
-
+<script src="https://cdn.ckeditor.com/4.16.2/full/ckeditor.js"></script>
 <script src="{{asset('dashboard/datatable/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
 
 <script src="{{asset('assets/plugins/select2/dist/js/select2.min.js')}}" type="text/javascript"></script>

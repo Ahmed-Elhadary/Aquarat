@@ -44,14 +44,16 @@
                             <input type="text" class="form-control" name="en_name" placeholder="English name"  >
                         </div>  --}}
 
-                        <div class="col-md-12 mb-3">
+                        {{--  <div class="col-md-12 mb-3">
                             <label for="validationCustom02">Arabic Details</label>
                             <textarea type="text" class="form-control" name="ar_details" maxlength="65" placeholder="Arabic Details"  required></textarea>
                             maximum length of 65 characters
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
-                        </div>
+                        </div>  --}}
+                        <input type="hidden" name="ar_details" value="151515">
+
                         <div class="col-md-12 mb-3">
                             <label >Image *</label>
                             <div class="input-group mb-3">

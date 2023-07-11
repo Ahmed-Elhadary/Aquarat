@@ -21,6 +21,7 @@ class UserSeeder extends Seeder
                 'email'          => 'admin@gmail.com',
                 'password'       => bcrypt('12345678'),
                 'remember_token' => null,
+                'isAdmin' =>1
             ],
         ];
 

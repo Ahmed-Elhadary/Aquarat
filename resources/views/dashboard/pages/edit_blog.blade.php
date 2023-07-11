@@ -41,7 +41,7 @@
                         </div>
                         <div class="col-md-12 mb-3">
                             <label for="validationCustom02">Arabic Description</label>
-                            <textarea type="text" class="form-control" id="ar_description" name="ar_description" maxlength="180"  placeholder="Arabic Description"  required>{{ $blog->ar_description }}</textarea>
+                            <textarea type="text" class="form-control ckeditor" id="ar_description" name="ar_description" maxlength="180"  placeholder="Arabic Description"  required>{{ $blog->ar_description }}</textarea>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
@@ -54,7 +54,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="btn btn-warning" type="submit">Upadte</button>
+                    <button class="btn btn-warning" type="submit" style="width: 150px">Upadte</button>
                     @method('PUT')
                 </form>
             </div>
@@ -63,7 +63,7 @@
     </div>
 @endsection
 @push('custom-scripts')
-<script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
+{{--  <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>  --}}
 <script>
     ClassicEditor.create( document.querySelector( '#ar_description' ) )
         .catch( error => {

@@ -21,7 +21,12 @@ lang="en" dir="ltr" @endif>
 
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
-
+    {{--  <meta name="keywords" content="mukhadbat, alsahmim, mukhadbat-alsahmim,صهاميم,مخضبات الصهاميم,مخضبات">
+    <meta name="description"  content="mukhadbat, alsahmim, mukhadbat-alsahmim,صهاميم,مخضبات الصهاميم,مخضبات">  --}}
+    {!! SEOMeta::generate() !!}
+    {!! OpenGraph::generate() !!}
+    {!! Twitter::generate() !!}
+    {!! JsonLd::generate() !!}
     <!-- Web Fonts  -->
     <link id="googleFonts"
         href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800%7CPlayfair+Display:400,400i,700%7CSintony:400,700,800&display=swap"

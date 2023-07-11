@@ -58,7 +58,7 @@
                         </div>  --}}
                         <div class="col-md-12 mb-3">
                             <label for="validationCustom02">Arabic Details</label>
-                            <textarea type="text" class="form-control" name="ar_details" id="ar_details" placeholder="Arabic Details"  required>{{ $about_company->ar_details }}</textarea>
+                            <textarea type="text" class="form-control ckeditor" name="ar_details" id="ar_details" placeholder="Arabic Details"  required>{{ $about_company->ar_details }}</textarea>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
@@ -136,7 +136,7 @@
 @endsection
 
 @push('custom-scripts')
-    <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
+    {{--  <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>  --}}
     <script>
         ClassicEditor.create( document.querySelector( '#ar_details' ) )
             .catch( error => {

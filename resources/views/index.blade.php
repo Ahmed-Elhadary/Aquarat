@@ -55,8 +55,8 @@
                         <article class="custom-post-event bg-color-light p-4">
                             <div class="post-event-date  text-center">
 
-                                <img src="{{ asset('images/Blog/' . $blog->image) }}" alt class="img-fluid"
-                                    style="max-height: 110px;
+                                <img src="{{ asset('images/Blog/' . $blog->image) }}" alt="mukhadbat-alsahmim" class="img-fluid"
+                                    style="max-height: 110px;    margin-top: 20px;
                             object-fit: cover;
                             width: 190px;" />
 
@@ -79,7 +79,7 @@
 
     @foreach ($aboutCompany as $about)
         <section class="section section-no-border custom-position-relative custom-section-padding-1 bg-color-light m-0"
-            style="overflow: hidden !important">
+            style="overflow: hidden !important;padding-bottom: 45px !important">
             {{--  <img class="custom-cloud left-pos d-none d-md-block appear-animation"
                 data-appear-animation="customFadeInLeftNoRotate" data-appear-animation-delay="0"
                 data-plugin-options="{'accY': -300}" src="{{ asset('images/About/' . $about->image) }}" alt />  --}}
@@ -142,7 +142,7 @@
                             <a data-href="ajax/demo-church-gallery-ajax-on-page-1.html"
                                 class="text-decoration-none  text-color-dark">
                                 <span class="thumb-info-wrapper">
-                                    <img src="{{ asset('images/Products/' . $product->image) }}" alt class="img-fluid"
+                                    <img src="{{ asset('images/Products/' . $product->image) }}" alt="mukhadbat-alsahmim,مخضبات الصهامهم" class="img-fluid"
                                         style="height: 280px;
                                     object-fit: cover;" />
                                 </span>
@@ -174,17 +174,18 @@
 
         <div class="row">
             <h2 style="text-align: center;
-            font-weight: 500;margin: 30px 0px;">أعمالنا </h2>
+            font-weight: 500;margin: 30px 0px;">شهاداتنا </h2>
             <div class="col">
 
                 <div class="owl-carousel owl-theme stage-margin"
-                    data-plugin-options="{'items': 3, 'margin': 10, 'rtl':true, 'loop': true, 'nav': true, 'dots': false, 'stagePadding': 40}">
+                    data-plugin-options="{'items': 3, 'margin': 10, 'rtl':true, 'loop': true, 'nav': false, 'dots': false, 'stagePadding': 40}">
 
                     @foreach ($reviews as $review)
                         <div>
                             <a href="{{ asset('Images/Reviews/'.$review->image) }}" target="_blank">
-                            <img alt="" class="img-fluid rounded" style=" height: 300px;
-                                object-fit: cover;"
+                            <img alt="مخضبات الصهامهم" class="img-fluid rounded" style="     height: 300px;
+                            object-fit: contain;
+                            border: 1px solid #a1a1a1;"
                                 src="{{ asset('Images/Reviews/'.$review->image) }}">
                             </a>
                         </div>

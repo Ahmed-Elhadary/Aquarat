@@ -20,7 +20,6 @@
                   <tr>
                     <th width="150px">Action</th>
                     <th>Image</th>
-                    <th>Years</th>
                     <th>Arabic Company Name</th>
                     {{--  <th>English Company Name</th>  --}}
                     {{--  <th class="hiddenCols">English Details</th>  --}}
@@ -41,8 +40,7 @@
                          <td>
                             <img src={{ asset('images/About/'.$company->image)}} width="70px" height="70px">
                         </td>
-                        <td>{{ $company->years }}</td>
-
+                       
                         <td>{{ $company->ar_company_name }}</td>
                         {{--  <td>{{ $company->en_company_name }}</td>  --}}
                         {{--  <td >{{ $company->en_details}}</td>  --}}

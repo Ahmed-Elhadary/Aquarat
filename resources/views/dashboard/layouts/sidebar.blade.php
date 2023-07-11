@@ -123,7 +123,7 @@
                         <li>
                             <a class="{{ (request()->is('*dashboard/companyservice*')) ? 'mm-active' : '' }}" href="{{ route('companyservice.index') }}">
                                 <i class="metismenu-icon   pe-7s-tools">
-                                </i> Company Services
+                                </i>  Services
                             </a>
                         </li>
                         {{--  <li>

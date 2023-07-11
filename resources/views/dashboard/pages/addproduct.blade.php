@@ -63,13 +63,14 @@
                             </div>
                         </div>
 
-                        <div class="col-md-12 mb-3">
+                        {{--  <div class="col-md-12 mb-3">
                             <label >Arabic Details *</label>
                             <textarea type="text" class="form-control " id="ar_details" name="ar_details"  placeholder="Arabic details"  required></textarea>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
-                        </div>
+                        </div>  --}}
+                        <input type="hidden" name="ar_details" value="11">
 {{--
                         <div class="col-md-12 mb-3">
                             <label >English Details</label>

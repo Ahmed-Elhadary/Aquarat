@@ -20,8 +20,7 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                   <tr>
-                    <th>Arabic Name</th>
-                    <th>Arabic Details</th>
+                    <th> Name</th>
                     <th>Image</th>
                     <th width="120px">Action</th>
 
@@ -31,7 +30,6 @@
                     @foreach($company_services as $service)
                     <tr>
                         <td>{{ $service->ar_name }}</td>
-                        <td>{{ $service->ar_details }}</td>
                         <td>
                             <img src={{ asset('images/CompanyService/'. $service->image)}} width="70px" height="70px">
                         </td>

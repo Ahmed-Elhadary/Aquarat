@@ -24,7 +24,7 @@
                     <span class="thumb-info custom-thumb-info-2">
                         <span class="thumb-info-wrapper">
                             <a href="demo-church-blog-detail.html">
-                                <img src="{{ asset('images/CompanyService/'.$CompanyService->image )}}" style="object-fit:fill; height: 250px " alt class="img-fluid" />
+                                <img src="{{ asset('images/CompanyService/'.$CompanyService->image )}}" style="object-fit:cover; height: 250px " alt class="img-fluid" />
                             </a>
                         </span>
                         <span class="thumb-info-caption custom-box-shadow">
@@ -34,7 +34,7 @@
                                         {{ $CompanyService->ar_name }}
                                     </span>
                                 </h4>
-                                <p>{!! $CompanyService->ar_details !!}</p>
+                                {{--  <p>{!! $CompanyService->ar_details !!}</p>  --}}
                             </span>
                         </span>
                     </span>

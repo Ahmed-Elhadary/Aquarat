@@ -1,7 +1,7 @@
 <!-- Footer -->
 @php $lang = LaravelLocalization::getCurrentLocale(); @endphp
 
-<footer id="footer" class=" custom-footer m-0" style="background: url('img/demos/church/footer-bg.jpg'); background-size: cover; background-color: #222222 !important;">
+<footer id="footer" class=" custom-footer m-0" style="background: url('img/demos/church/footer-bg.jpg'); background-size: cover; background-color: #241b3e !important;">
     <div class="container pt-5">
         {{--  <div class="row text-center">
             <div class="col">
@@ -16,7 +16,7 @@
                 <i class="fas fa-map-marker-alt  custom-icon-size-1"></i>
                 <p class="custom-text-color-2 alternative-font-4 text-3-5">
                     <strong class="d-block text-color-light  text-5-5 line-height-8 mb-1">  @lang('site.address')</strong>
-                   <a  style="font-size: 18px;"> {!! html_entity_decode( $contactInfo[$lang.'_address']) !!} </a>
+                   <a  style="font-size: 15px;"> {!! html_entity_decode( $contactInfo[$lang.'_address']) !!} </a>
                 </p>
             </div>
             <div class="col-lg-4 custom-sm-margin-bottom-1">

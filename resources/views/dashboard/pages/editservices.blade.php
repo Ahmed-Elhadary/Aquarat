@@ -47,14 +47,15 @@
                         </div>
 
 
-                        <div class="col-md-12 mb-3">
+                        {{--  <div class="col-md-12 mb-3">
                             <label for="validationCustom02">Arabic Details</label>
                             <textarea type="text" class="form-control" name="ar_details" maxlength="180"  placeholder="Arabic Details"  required>{{ $services->ar_details}}</textarea>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                             maximum length of 180 characters
-                        </div>
+                        </div>  --}}
+                        <input type="hidden" name="ar_details" value="{{ $products->ar_details }}">
                         <div class="col-md-12 mb-3">
                             <label for="validationCustom02">English Details</label>
                             <textarea type="text" class="form-control" name="en_details" maxlength="180"  placeholder="English Details"  >{{ $services->en_details}}</textarea>

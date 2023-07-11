@@ -56,13 +56,15 @@
                             <input type="text" class="form-control" name="en_name" value="{{ $products->en_name }}" placeholder="English name"  >
                         </div>  --}}
 
-                        <div class="col-md-12 mb-3">
+                        {{--  <div class="col-md-12 mb-3">
                             <label for="validationCustom02">Arabic Details</label>
                             <textarea type="text" class="form-control" name="ar_details"  id="ar_details"  placeholder="Arabic details"  required>   {{ $products->ar_details }}</textarea>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
-                        </div>
+                        </div>  --}}
+                        <input type="hidden" name="ar_details" value="{{ $products->ar_details }}">
+
 
                         {{--  <div class="col-md-12 mb-3">
                             <label for="validationCustom02">English Details</label>
